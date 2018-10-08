@@ -3,11 +3,12 @@
     .image-wrapper
       .fade-overlay
       .gradient-background
-      img.headshot-image( src="./AppWelcomePage/assets/headshot.png" )
-    .text-section
-      strong.sub-header Hi there, I'm
-      h1.title Will Willems
-      p.body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
+      .headshot-image( src="./AppWelcomePage/assets/headshot.png" )
+    .text-section-wrapper
+      .text-section
+        strong.text-section__sub-header Hi there, I'm
+        h1.text-section__title Will Willems
+        p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
 </template>
 
 <script>
@@ -21,13 +22,25 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$sm-break-point: 600px;
+
 .welcome-section {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $sm-break-point) {
+    flex-direction: row;
+  }
 }
 .image-wrapper {
   position: relative;
   width: 100vw;
+  min-height: 350px;
+  overflow: hidden;
+
+  @media (min-width: $sm-break-point) {
+    height: 100vh;
+  }
   
   .fade-overlay {
     z-index: 1;
@@ -35,6 +48,10 @@ export default {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 75%, #000000 100%);
+
+    @media (min-width: $sm-break-point) {
+      background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 75%, #000000 100%);
+    }
   }
 
   .gradient-background {
@@ -42,35 +59,48 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
-    opacity: 0.8;
-    background-image: linear-gradient(-134deg, #3023AE 0%, #C96DD8 100%);  }
+    opacity: 0.5;
+    background-image: linear-gradient(-162deg, #FE6C6C 0%, #F08C2A 92%);
+  }
 
-  img {
-    width: 100vw;
+  .headshot-image {
+    background-image: url("./AppWelcomePage/assets/headshot.png");
+    width: 100%;
+    height: 100%;
+    background-position: bottom; // otherwise empty space between start torso and bottom
+    background-size: cover;
     filter: grayscale(100%);
     transition: filter 1s ease-in-out;
   }
 
   &:hover {
-    img {
-      filter: none;
+    .headshot-image {
+      filter: none; // color on hover
     }
   }
 }
 
+.text-section-wrapper {
+  min-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-section {
   margin: 0 20px;
+  max-width: 500px;
 
-  .sub-header {
+  &__sub-header {
     color: #EA7928;
   }
 
-  .title {
+  &__title {
     margin: 10px 0 5px 0;
     font-size: 3rem;
   }
 
-  .body {
+  &__body {
     margin: 0;
     line-height: 1.8em;
   }
