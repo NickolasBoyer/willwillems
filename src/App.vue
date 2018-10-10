@@ -1,17 +1,17 @@
 <template lang="pug">
   #app
-    app-welcome-page
+    the-welcome-page
     a.contact-link( href="mailto:will@nickolasboyer.com" )
       img( src="./assets/contact-img.svg" )
 </template>
 
 <script>
-import AppWelcomePage from './components/AppWelcomePage.vue'
+import TheWelcomePage from './components/TheWelcomePage.vue'
 
 export default {
   name: 'app',
   components: {
-    AppWelcomePage
+    TheWelcomePage
   }
 }
 </script>

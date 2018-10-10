@@ -3,7 +3,7 @@
     .image-wrapper
       .fade-overlay
       .gradient-background
-      .headshot-image( src="./AppWelcomePage/assets/headshot.png" )
+      .headshot-image( src="./TheWelcomePage/assets/headshot.png" )
     .text-section-wrapper
       .text-section
         strong.text-section__sub-header Hi there, I'm
@@ -64,7 +64,7 @@ $sm-break-point: 600px;
   }
 
   .headshot-image {
-    background-image: url("./AppWelcomePage/assets/headshot.png");
+    background-image: url("./TheWelcomePage/assets/headshot.png");
     width: 100%;
     height: 100%;
     background-position: bottom; // otherwise empty space between start torso and bottom
