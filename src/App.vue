@@ -2,8 +2,8 @@
   #app
     TheWelcomePage
     a.contact-link( href="mailto:will@nickolasboyer.com" )
-      img( src="./assets/contact-img.svg" )
-    TheSubscribeOverlay
+      img( src="./assets/contact-img.svg" alt="headshot" )
+    // TheSubscribeOverlay
 </template>
 
 <script>
