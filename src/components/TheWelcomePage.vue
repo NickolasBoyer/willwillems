@@ -59,7 +59,13 @@ export default {
     height: 100%;
     width: 100%;
     opacity: 0.7;
-    background-image: radial-gradient(circle at top left, rgba(224,69,69,0.84) 0%, rgba(244,129,64,0.61) 27%, rgba(242,135,52,0.29) 59%, rgba(240,140,42,0.00) 89%); // linear-gradient(-162deg, #FE6C6C 0%, #F08C2A 92%);
+    background-image: radial-gradient(
+      circle at top left,
+      rgba(224,69,69,0.84) 0%,
+      rgba(244,129,64,0.61) 27%,
+      rgba(242,135,52,0.29) 59%,
+      rgba(240,140,42,0.00) 89%
+    );
   }
 
   .headshot-image {
