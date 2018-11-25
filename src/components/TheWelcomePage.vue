@@ -47,10 +47,6 @@ export default {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 75%, #000000 100%);
-
-    @media (min-width: $sm-break-point) {
-      background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 75%, #000000 100%);
-    }
   }
 
   .gradient-background {
@@ -62,9 +58,9 @@ export default {
     background-image: radial-gradient(
       circle at top left,
       rgba(224,69,69,0.84) 0%,
-      rgba(244,129,64,0.61) 27%,
-      rgba(242,135,52,0.29) 59%,
-      rgba(240,140,42,0.00) 89%
+      rgba(244,129,64,0.61) 17%,
+      rgba(242,135,52,0.29) 49%,
+      rgba(240,140,42,0.00) 59%
     );
   }
 

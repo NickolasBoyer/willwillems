@@ -3,18 +3,18 @@
     TheWelcomePage
     a.contact-link( href="mailto:will@nickolasboyer.com" )
       img( src="./assets/contact-img.svg" alt="headshot" )
-    // TheSubscribeOverlay
+    TheArticlePage
 </template>
 
 <script>
 import TheWelcomePage from './components/TheWelcomePage.vue'
-import TheSubscribeOverlay from './components/TheSubscribeOverlay.vue'
+import TheArticlePage from './components/TheArticlePage.vue'
 
 export default {
   name: 'app',
   components: {
     TheWelcomePage,
-    TheSubscribeOverlay
+    TheArticlePage
   }
 }
 </script>
