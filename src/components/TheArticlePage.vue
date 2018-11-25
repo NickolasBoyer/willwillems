@@ -4,7 +4,11 @@
       h1 Writings
       // .article-section__sub-title Something to read
     .article-list
-      .article-card(v-for="(story, i) in writings" :key="i")
+      a.article-card(
+        v-for="(story, i) in writings"
+        :key="story.link"
+        :href="story.link"
+      )
         .article-card__number-section
           | 0{{i}}
         .article-card__info-section
@@ -17,6 +21,11 @@
 </template>
 
 <script>
+// display cards in horizontal row (display inline block on the a tag)
+// under one featured article with graphics
+// scrollable horizontally
+
+
 import { getGoogleDriveDownloadLink } from '@/utils'
 export default {
   name: 'TheArticlePage',
@@ -72,11 +81,7 @@ export default {
 
     h1 {
       margin: 0;
-      font-size: 5rem;
-
-      @media (max-width: $sm-break-point) {
-        font-size: 4rem;
-      }
+      font-size: 3.5rem;
     }
   }
 
@@ -94,6 +99,8 @@ export default {
 }
 
 .article-card {
+  display: block;
+  color: inherit;
   padding: 10px 5px;
   margin: 10px 5px;
   cursor: pointer;
@@ -125,6 +132,8 @@ export default {
 
   &__title {
     opacity: 0.92;
+    white-space: normal;
+    max-width: 320px; // TODO: fix this
   }
 
   &__sub-title {
