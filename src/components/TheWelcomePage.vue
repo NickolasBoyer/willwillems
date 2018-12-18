@@ -1,15 +1,24 @@
 <template lang="pug">
   .section.welcome-section
-    .image-wrapper
-      .fade-overlay
-      .gradient-background
-      .headshot-image
-        img( src="/static/img/headshot.webp" onerror="this.onerror=null; this.src='/static/img/headshot.png'" )
-    .text-section-wrapper
-      .text-section
-        strong.text-section__sub-header Hi there, I'm
-        h1.text-section__title Will Willems
-        p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
+    .personal-image
+      img( src="/static/img/cover.webp" onerror="this.onerror=null; this.src='/static/img/cover.jpg'" )
+    .text-section
+      strong.text-section__sub-header Hi there, I'm
+      h1.text-section__title Will Willems
+      p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
+    #writings.info-section
+      .info-section__number 01
+      .info-section__title Writings
+      .info-section__body I like articles, sometimes I even write one. Covering various topics I try to provide some value here and there. You might like them, you might not, <a href="https://medium.com/@rut.willems"> curious?</a>
+    #projects.info-section
+      .info-section__number 02
+      .info-section__title Projects
+      .info-section__body I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, <a href="https://nickolasboyer.com">Nickolas Boyer</a>, check them out!
+    #contact.info-section
+      .info-section__number 03
+      .info-section__title Contact
+      .info-section__body
+        | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
 </template>
 
 <script>
@@ -24,80 +33,43 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .welcome-section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 110px repeat(12, 1fr) 110px;
+  grid-template-rows: 120px 310px 100px 140px;
+  grid-column-gap: 0px;
+  grid-template-areas:
+    ".              .             .             .             .             .             .             .             .             .             .             .             .             .             "
+    ".              cover-img     cover-img     cover-img     cover-img     cover-img     cover-img     .             cover-text    cover-text    cover-text    cover-text    .             .             "
+    ".              .             .             .             .             .             .             .             .             .             .             .             .             .             "
+    ".              writing-text  writing-text  writing-text  .             projects-text projects-text projects-text .             contact-text  contact-text  contact-text  .             .             ";
 
-  @media (min-width: $sm-break-point) {
-    flex-direction: row;
-  }
-}
-.image-wrapper {
-  position: relative;
-  width: 100vw;
-  min-height: 350px;
-  overflow: hidden;
-
-  @media (min-width: $sm-break-point) {
-    height: 100vh;
-  }
-
-  .fade-overlay {
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 75%, #000000 100%);
-  }
-
-  .gradient-background {
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: 0.7;
-    background-image: radial-gradient(
-      circle at top left,
-      rgba(224,69,69,0.84) 0%,
-      rgba(244,129,64,0.61) 17%,
-      rgba(242,135,52,0.29) 49%,
-      rgba(240,140,42,0.00) 59%
-    );
-  }
-
-  .headshot-image {
-    width: 100%;
-    height: 100%;
-    filter: grayscale(100%);
-    transition: filter 1s ease-in-out;
-
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: bottom right;
-    }
-  }
-
-  &:hover {
-    .headshot-image {
-      filter: none; // color on hover
-    }
+  @media (max-width: $sm-break-point) {
+    display: initial;
   }
 }
 
-.text-section-wrapper {
-  min-width: 50vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.personal-image {
+  grid-area: cover-img;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
+
 
 .text-section {
-  margin: 0 20px;
+  grid-area: cover-text;
+  margin: 50px 10px;
   max-width: 500px;
 
+  @media (max-width: $sm-break-point) {
+    margin: 30px 20px;
+  }
+
   &__sub-header {
-    color: #EA7928;
+    color: $prim-gold;
   }
 
   &__title {
@@ -108,6 +80,41 @@ export default {
   &__body {
     margin: 0;
     line-height: 1.8em;
+    opacity: 0.85;
+  }
+}
+
+.info-section {
+  margin: 10px;
+  @media (max-width: $sm-break-point) {
+    margin: 20px;
+  }
+
+  &#writings {
+    grid-area: writing-text;
+  }
+  &#projects {
+    grid-area: projects-text;
+  }
+  &#contact {
+    grid-area: contact-text;
+  }
+  &__number {
+    color: $prim-red;
+    font-size: 0.8rem;
+    font-weight: bold;
+    // font-stretch: condensed;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  &__body {
+    font-size: 0.9rem;
+    font-weight: 200;
+    line-height: 2em;
   }
 }
 </style>

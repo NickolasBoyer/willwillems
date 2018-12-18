@@ -3,7 +3,6 @@
     TheWelcomePage
     a.contact-link( href="mailto:will@nickolasboyer.com" )
       img( src="./assets/contact-img.svg" alt="headshot" )
-    TheArticlePage
 </template>
 
 <script>
@@ -25,6 +24,7 @@ export default {
   right: 20px;
   bottom: 20px;
   color: white;
+  border: none;
 
   // &::before {
   //   content: '';
