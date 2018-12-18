@@ -113,7 +113,7 @@ export default {
   }
   &__body {
     font-size: 0.9rem;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 2em;
   }
 }
