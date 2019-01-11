@@ -47,3 +47,9 @@ input, button {
   font-size: 1rem;
   font-weight: bold;
 }
+
+// vuepress specific
+
+svg.icon.outbound {
+  display: none;
+}

@@ -1,24 +1,26 @@
 <template lang="pug">
   .section.welcome-section
     .personal-image
-      img( src="/static/img/cover.webp" onerror="this.onerror=null; this.src='/static/img/cover.jpg'" )
+      img( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover.jpg'" )
     .text-section
       strong.text-section__sub-header Hi there, I'm
       h1.text-section__title Will Willems
       p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
     #writings.info-section
       .info-section__number 01
-      .info-section__title Writings
-      .info-section__body I like articles, sometimes I even write one. Covering various topics I try to provide some value here and there. You might like them, you might not, <a href="https://medium.com/@rut.willems"> curious?</a>
+      // .info-section__title Writings
+      Content( slot-key="writings" ).info-section__body
+      //  | I like articles, sometimes I even write one. Covering various topics I try to provide some value here and there. You might like them, you might not, <a href="https://medium.com/@rut.willems"> curious?</a>
     #projects.info-section
       .info-section__number 02
-      .info-section__title Projects
-      .info-section__body I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, <a href="https://nickolasboyer.com">Nickolas Boyer</a>, check them out!
+      // .info-section__title Projects
+      Content( slot-key="projects" ).info-section__body
+      //  | I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, <a href="https://nickolasboyer.com">Nickolas Boyer</a>, check them out!
     #contact.info-section
       .info-section__number 03
-      .info-section__title Contact
-      .info-section__body
-        | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
+      // .info-section__title Contact
+      Content( slot-key="contact" ).info-section__body
+      //  | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
 </template>
 
 <script>
@@ -32,6 +34,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../styles/vars.scss";
+
 .welcome-section {
   display: grid;
   min-height: 100vh;
@@ -106,15 +110,19 @@ export default {
     // font-stretch: condensed;
     margin-bottom: 10px;
   }
-  &__title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 5px 0;
-  }
   &__body {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 2em;
+    & /deep/ h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 5px 0;
+      padding: none;
+    }
+    & /deep/ p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 2em;
+      margin: 0;
+    }
   }
 }
 </style>
