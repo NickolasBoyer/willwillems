@@ -21,6 +21,10 @@
       // .info-section__title Contact
       Content( slot-key="contact" ).info-section__body
       //  | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
+    // .list
+      ul
+        li(v-for="page in $site.pages")
+          a(:href="page.path") {{page.title}}
 </template>
 
 <script>
