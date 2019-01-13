@@ -76,3 +76,5 @@ export default {
   }
 }
 </style>
+
+<style src="prismjs/themes/prism-okaidia.css"></style>
