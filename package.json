@@ -4,10 +4,10 @@
     "build": "vuepress build"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.31",
     "node-sass": "^4.11.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "vuepress": "^1.0.0-alpha.31"
   }
 }
