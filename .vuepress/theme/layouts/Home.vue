@@ -1,37 +1,56 @@
 <template lang="pug">
-  .section.welcome-section
-    .personal-image
-      img( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover.jpg'" )
-    .text-section
-      strong.text-section__sub-header Hi there, I'm
-      h1.text-section__title Will Willems
-      p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
-    #writings.info-section
-      .info-section__number 01
-      // .info-section__title Writings
-      Content( slot-key="writings" ).info-section__body
-      //  | I like articles, sometimes I even write one. Covering various topics I try to provide some value here and there. You might like them, you might not, <a href="https://medium.com/@rut.willems"> curious?</a>
-    #projects.info-section
-      .info-section__number 02
-      // .info-section__title Projects
-      Content( slot-key="projects" ).info-section__body
-      //  | I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, <a href="https://nickolasboyer.com">Nickolas Boyer</a>, check them out!
-    #contact.info-section
-      .info-section__number 03
-      // .info-section__title Contact
-      Content( slot-key="contact" ).info-section__body
-      //  | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
-    // .list
-      ul
-        li(v-for="page in $site.pages")
-          a(:href="page.path") {{page.title}}
+  .home
+    .section.welcome-section
+      .personal-image
+        img( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover.jpg'" )
+      .text-section
+        strong.text-section__sub-header Hi there, I'm
+        h1.text-section__title Will Willems
+        p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
+      #writings.info-section
+        .info-section__number 01
+        // .info-section__title Writings
+        Content( slot-key="writings" ).info-section__body
+        //  | I like articles, sometimes I even write one. Covering various topics I try to provide some value here and there. You might like them, you might not, <a href="https://medium.com/@rut.willems"> curious?</a>
+      #projects.info-section
+        .info-section__number 02
+        // .info-section__title Projects
+        Content( slot-key="projects" ).info-section__body
+        //  | I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, <a href="https://nickolasboyer.com">Nickolas Boyer</a>, check them out!
+      #contact.info-section
+        .info-section__number 03
+        // .info-section__title Contact
+        Content( slot-key="contact" ).info-section__body
+        //  | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
+      .article-list
+        h1.article-list__title Writings
+          span.article-list__title-beta-tag beta
+        .article-card-container
+          span( v-for="page in previewPosts" )
+            ArticlePreviewCard(
+              :link="page.path"
+              :title="page.title"
+              :img="page.frontmatter.img"
+              :date="page.frontmatter.date"
+          )
 </template>
 
 <script>
+import ArticlePreviewCard from '../components/ArticlePreviewCard.vue'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    ArticlePreviewCard
+  },
+  computed: {
+    previewPosts () {
+      return this.$site.pages
+        .filter(post => !!post.frontmatter.img)
+        .slice(0,3)
+    }
   }
 }
 </script>
@@ -43,14 +62,16 @@ export default {
 .welcome-section {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 110px repeat(12, 1fr) 110px;
-  grid-template-rows: 120px 310px 100px 140px;
+  grid-template-columns: 110px repeat(11, 1fr) 110px;
+  grid-template-rows: 120px 310px 100px auto auto 70px;
   grid-column-gap: 0px;
   grid-template-areas:
-    ".              .             .             .             .             .             .             .             .             .             .             .             .             .             "
-    ".              cover-img     cover-img     cover-img     cover-img     cover-img     cover-img     .             cover-text    cover-text    cover-text    cover-text    .             .             "
-    ".              .             .             .             .             .             .             .             .             .             .             .             .             .             "
-    ".              writing-text  writing-text  writing-text  .             projects-text projects-text projects-text .             contact-text  contact-text  contact-text  .             .             ";
+    ".              .             .             .             .             .             .             .             .             .             .             .             .             "
+    ".              cover-img     cover-img     cover-img     cover-img     cover-img     cover-img     .             cover-text    cover-text    cover-text    cover-text    .             "
+    ".              .             .             .             .             .             .             .             .             .             .             .             .             "
+    ".              writing-text  writing-text  writing-text  .             projects-text projects-text projects-text .             contact-text  contact-text  contact-text  .             "
+    ".              blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    .             "
+    ".              .             .             .             .             .             .             .             .             .             .             .             .             ";
 
   @media (max-width: $sm-break-point) {
     display: initial;
@@ -128,5 +149,28 @@ export default {
       margin: 0;
     }
   }
+}
+
+.article-list {
+  grid-area: blog-posts;
+  padding-top: 50px;
+
+  &__title {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  &__title-beta-tag {
+    font-size: 0.8rem;
+    color: $prim-red;
+    margin: 0 5px;
+  }
+}
+
+.article-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: scroll;
 }
 </style>
