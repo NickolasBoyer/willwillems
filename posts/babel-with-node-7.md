@@ -1,20 +1,19 @@
 ---
 duration: 4 min
 author: Will Willems
-date: 09-11-18
+date: '09-11-18'
 lang: en-US
----
 
-# Using node with Babel 7 
+---
+# Using node with Babel 7
 
 So you want to use the new babel 7 with node? Our goal here will be to set up a minimal node application that is able to run locally and has a build command for remote deployment. Lets get started!
-Medium kinda forces me to make these… I know…
 
 There are a couple of differences with the babel you might be familiar with and v7.
 
-- Babels packages are now scoped just like many other large organisations Babel has renamed it’s NPM packages. This means `babel-cli` for example has been renamed to `@babel/cli` .
-- No messing around with presets anymore. You can just use `@babel/preset-env` now and optionally define your requirements in the config file.
-- babel-node has been moved from the CLI to it’s own package: `@babel/node`
+* Babels packages are now scoped just like many other large organisations Babel has renamed it’s NPM packages. This means `babel-cli` for example has been renamed to `@babel/cli` .
+* No messing around with presets anymore. You can just use `@babel/preset-env` now and optionally define your requirements in the config file.
+* babel-node has been moved from the CLI to it’s own package: `@babel/node`
 
 Ok so we have the most important things down. You can optionally read more about the changes on babels website but here is what we need to do next:
 Setting up the application structure
@@ -25,22 +24,18 @@ First you want to run `npm init` to create a `package.json` file inside the dire
 
 We’ll set up two directories, one to develop in and one to deploy our compiled assets.
 
-```
-your-project-directory
-|--dist
-|--src
-|--package.json
-```
+    your-project-directory
+    |--dist
+    |--src
+    |--package.json
 
 For this example we’ll add just a simple file inside the src directory called `server.js`
 
-```
-your-project-directory
-|--dist
-|--src
-|  |--server.js
-|--package.json
-```
+    your-project-directory
+    |--dist
+    |--src
+    |  |--server.js
+    |--package.json
 
 We’ll need to add some babel packages to our project with `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node`. These respectively take care of babels general working, the usage of babel in the command line, the ability to use the newest JS features and the usage of babel with node.
 
@@ -57,15 +52,13 @@ Finally we just need to tell babel to use the `@babel/preset-env` package by cre
 
 Your project structure should now look like this:
 
-```
-your-project-directory
-|--dist
-|--node_modules
-|--src
-|  |--server.js
-|--package.json
-|--.babelrc
-```
+    your-project-directory
+    |--dist
+    |--node_modules
+    |--src
+    |  |--server.js
+    |--package.json
+    |--.babelrc
 
 Adding scripts to package.json
 
