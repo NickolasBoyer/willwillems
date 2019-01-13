@@ -2,7 +2,7 @@
   .blog-post-page
     .post-container
       .headshot-image-container
-        img( src="https://images.unsplash.com/photo-1547142632-bca340742184?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" )
+        img( :src="$page.frontmatter.img" )
         img( src="/img/cutout.svg" )
       h1.article-title {{$page.title}}
       p.article-description
@@ -50,6 +50,10 @@ export default {
   }
 }
 
+.article-title {
+  max-width: 760px;
+}
+
 .article-description {
   opacity: 0.7;
   font-family: 'Merriweather', Arial, Helvetica, serif;
@@ -57,6 +61,7 @@ export default {
 }
 
 .page-content {
+  display: inline-block;
   text-align: left;
   max-width: 720px;
   padding: 0 20px;
