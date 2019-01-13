@@ -2,6 +2,7 @@
 duration: 4 min
 author: Will Willems
 date: '09-11-18'
+img: '/img/babel+node-thumb.jpeg'
 lang: en-US
 
 ---

@@ -2,6 +2,7 @@
 duration: 5 min
 author: Will Willems
 date: 13-12-18
+img: '/img/css-frameworks-thumb.png'
 lang: en-US
 ---
 
