@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Will Willems',
   description: 'The personal page and blog of Will Willems',
+  dest: "dist",
   markdown: {
     externalLinkSymbol: false,
     anchor: {
