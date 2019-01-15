@@ -24,19 +24,21 @@ We’ll keep it as simple as possible:
 First you want to run `npm init` to create a `package.json` file inside the directory and depending on if you are using Git you might want to run `git init`
 
 We’ll set up two directories, one to develop in and one to deploy our compiled assets.
-
-    your-project-directory
-    |--dist
-    |--src
-    |--package.json
+```
+  your-project-directory
+  |--dist
+  |--src
+  |--package.json
+```
 
 For this example we’ll add just a simple file inside the src directory called `server.js`
-
-    your-project-directory
-    |--dist
-    |--src
-    |  |--server.js
-    |--package.json
+```
+  your-project-directory
+  |--dist
+  |--src
+  |  |--server.js
+  |--package.json
+```
 
 We’ll need to add some babel packages to our project with `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node`. These respectively take care of babels general working, the usage of babel in the command line, the ability to use the newest JS features and the usage of babel with node.
 
@@ -53,13 +55,15 @@ Finally we just need to tell babel to use the `@babel/preset-env` package by cre
 
 Your project structure should now look like this:
 
-    your-project-directory
-    |--dist
-    |--node_modules
-    |--src
-    |  |--server.js
-    |--package.json
-    |--.babelrc
+```
+  your-project-directory
+  |--dist
+  |--node_modules
+  |--src
+  |  |--server.js
+  |--package.json
+  |--.babelrc
+```
 
 Adding scripts to package.json
 
