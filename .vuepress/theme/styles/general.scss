@@ -55,3 +55,12 @@ input, button {
 svg.icon.outbound {
   display: none;
 }
+
+// styling for inline code 
+
+p > code, li > code {
+  background-color: #272822;
+  padding: 3px 4px;
+  border-radius: 2px;
+  color: #f8f8f2;
+}
