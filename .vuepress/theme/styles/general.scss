@@ -59,8 +59,12 @@ svg.icon.outbound {
 // styling for inline code 
 
 p > code, li > code {
-  background-color: rgba(31, 31, 31, 0.062);
-  color: #353535;
+  background-color: rgba(103, 149, 201, 0.12);
+  // color: #353535;
   padding: .25rem .5rem;
   border-radius: 3px;
 }
+
+// prism
+
+@import "./external/prism-dragula.css";
