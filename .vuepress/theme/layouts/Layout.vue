@@ -21,8 +21,8 @@ export default {
 
 <style lang="scss" scoped>
 .blog-post-page {
-  background-color: rgb(243, 243, 243);
-  color: rgb(51, 51, 51);
+  background-color: rgb(26, 28, 32);
+  color: rgb(213, 210, 205);
   text-align: center;
 }
 
@@ -61,7 +61,7 @@ export default {
 }
 
 .page-content {
-  display: inline-block;
+  // display: inline-block;
   text-align: left;
   max-width: 720px;
   padding: 0 20px;
@@ -81,5 +81,3 @@ export default {
   }
 }
 </style>
-
-<style src="prismjs/themes/prism-okaidia.css"></style>
