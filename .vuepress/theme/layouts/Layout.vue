@@ -10,6 +10,8 @@
         span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
         span(v-if="$frontmatter.author") by {{$frontmatter.author}}
       Content.page-content
+      footer
+        p Footer
   </div>
 </template>
 
@@ -56,8 +58,6 @@ export default {
 
 .article-description {
   opacity: 0.7;
-  font-family: 'Merriweather', Arial, Helvetica, serif;
-  font-size: 0.8em;
 }
 
 .page-content {
@@ -76,7 +76,6 @@ export default {
 
   & /deep/ p, & /deep/ li {
     line-height: 1.8em;
-    font-family: 'Merriweather', Arial, Helvetica, serif;
     font-weight: 500;
   }
 }
