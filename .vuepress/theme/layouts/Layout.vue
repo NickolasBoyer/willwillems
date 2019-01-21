@@ -23,8 +23,6 @@ export default {
 
 <style lang="scss" scoped>
 .blog-post-page {
-  background-color: rgb(26, 28, 32);
-  color: rgb(213, 210, 205);
   text-align: center;
 }
 

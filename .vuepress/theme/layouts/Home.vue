@@ -129,7 +129,7 @@ export default {
     grid-area: contact-text;
   }
   &__number {
-    color: $prim-red;
+    color: $prim-gold;
     font-size: 0.8rem;
     font-weight: bold;
     // font-stretch: condensed;
@@ -162,7 +162,7 @@ export default {
 
   &__title-beta-tag {
     font-size: 0.8rem;
-    color: $prim-red;
+    color: $prim-gold;
     margin: 0 5px;
   }
 }
