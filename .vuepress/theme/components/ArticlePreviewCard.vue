@@ -53,6 +53,7 @@ $img-height: 180px;
     object-fit: cover;
     background-color: #CC5141;
     border-width: 0;
+    border-radius: 5px;
   }
 
   &__date {

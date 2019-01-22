@@ -62,7 +62,7 @@ export default {
 .welcome-section {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 110px repeat(11, 1fr) 110px;
+  grid-template-columns: 1fr repeat(11, 90px) 1fr;
   grid-template-rows: 120px 310px 100px auto auto 70px;
   grid-column-gap: 0px;
   grid-template-areas:
@@ -73,7 +73,7 @@ export default {
     ".              blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    blog-posts    .             "
     ".              .             .             .             .             .             .             .             .             .             .             .             .             ";
 
-  @media (max-width: $sm-break-point) {
+  @media (max-width: $md-break-point) {
     display: initial;
   }
 }
