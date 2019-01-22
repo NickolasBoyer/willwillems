@@ -1,7 +1,7 @@
 ---
 duration: 4 min
 author: Will Willems
-date: 20-12-18
+date: 11-20-18
 img: '/img/vue-components-thumb.png'
 lang: en-US
 

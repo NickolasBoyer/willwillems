@@ -10,5 +10,11 @@ module.exports = {
   },
   themeConfig: {
     homeImgSrc: '/img/cover.webp'
+  },
+  plugins: {
+    'feed': {
+      canonical_base: 'https://willwillems.com',
+      posts_directories: ['/posts/'],
+    }
   }
 }
