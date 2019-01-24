@@ -142,10 +142,10 @@ svg.icon.outbound {
 }
 ```
 
-- to hide external link icon -->
+- to hide external link icon
 
 ## Doing more
 
 Ok so you have a simple file on the default VuePress theme, nice but not too exciting.
 
-- links to other guides
+- links to other guides-->
