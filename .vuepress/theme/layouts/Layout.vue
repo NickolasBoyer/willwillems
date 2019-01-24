@@ -6,7 +6,7 @@
         img( src="/img/cutout.svg" )
       h1.article-title {{$page.title}}
       p.article-description
-        span January 01 2019 • 
+        span(v-if="$frontmatter.date") {{$frontmatter.date}} • 
         span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
         span(v-if="$frontmatter.author") by {{$frontmatter.author}}
       Content.page-content
