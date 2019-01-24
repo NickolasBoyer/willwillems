@@ -115,7 +115,7 @@ Now your static assets will end up in the `/dist` folder in your root. By defaul
 
 ## Creating our fist content
 
-Since this project is originally geared towards documentation creation its only logical that the source for the `index.html` file will be the `[README.md](http://readme.md)` file in the root of your project. Create the file and put some simple markdown in there like:
+Since this project is originally geared towards documentation creation its only logical that the source for the `index.html` file will be the `README.md` file in the root of your project. Create the file and put some simple markdown in there like:
 
 ``` md
 # Use a title
@@ -126,7 +126,7 @@ And some more content
 - for example
 ```
 
-Now it's time to finally reap the fruits of our labour, if you've done everything correctly you should now be able to execute `npm run dev` and check out your first webpage!
+Now it's time to reap the fruits of our labour, if you've done everything correctly you should now be able to execute `npm run dev` and check out your first webpage!
 
 If everything looks good you can generate your new webpage using `npm run build`.
 
