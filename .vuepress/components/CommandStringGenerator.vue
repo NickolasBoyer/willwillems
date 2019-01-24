@@ -1,16 +1,17 @@
 <template lang="pug">
-  .generator-box
-    .input-wrapper
-      b
-        label( for="variable-input" ) Your project name:
+  .generator-wrapper
+    .generator-box
+      .input-wrapper
+        b
+          label( for="variable-input" ) Your project name:
+        br
+        input.variable-input( v-model="userInput" name="variable-input")
       br
-      input.variable-input( v-model="userInput" name="variable-input")
-    br
-    .input-wrapper
-      b
-        label( for="string-output" ) Complete command:
-      br
-      input.string-output( readonly :value="stringOutput" name="string-output" )
+      .input-wrapper
+        b
+          label( for="string-output" ) Complete command:
+        br
+        input.string-output( readonly :value="stringOutput" name="string-output" )
     br
 </template>
 
@@ -31,8 +32,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.generator-box {
+.generator-wrapper {
   text-align: center;
+}
+
+.generator-box {
+  display: inline-block;
+  width: 300px;
+  padding: 20px 10px;
 }
 </style>
 
