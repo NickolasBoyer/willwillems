@@ -17,7 +17,7 @@ I like articles, sometimes I even write one. Covering various topics I try to pr
 ::: slot projects
 ## Projects
 
-I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, [Nickolas Boyer](https://nickolasboyer.com/), check them out!
+I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough [Nickolas Boyer](https://nickolasboyer.com/), check them out!
 :::
 
 ::: slot contact

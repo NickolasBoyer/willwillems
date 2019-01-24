@@ -9,19 +9,13 @@
         p.text-section__body Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
       #writings.info-section
         .info-section__number 01
-        // .info-section__title Writings
         Content( slot-key="writings" ).info-section__body
-        //  | I like articles, sometimes I even write one. Covering various topics I try to provide some value here and there. You might like them, you might not, <a href="https://medium.com/@rut.willems"> curious?</a>
       #projects.info-section
         .info-section__number 02
-        // .info-section__title Projects
         Content( slot-key="projects" ).info-section__body
-        //  | I do projects. Projects for multinationals with millions of customers and little ones with a few happy users. Most of them trough my consultancy, <a href="https://nickolasboyer.com">Nickolas Boyer</a>, check them out!
       #contact.info-section
         .info-section__number 03
-        // .info-section__title Contact
         Content( slot-key="contact" ).info-section__body
-        //  | You can contact me trough <a href="https://twitter.com/will_rut">twitter</a> or <a href="mailto:will@nickolasboyer.com">email</a>. The former for quick chit-chat and the latter for more structured long-term communication.
       .article-list
         h1.article-list__title Writings
           span.article-list__title-beta-tag beta
@@ -110,6 +104,7 @@ export default {
     margin: 0;
     line-height: 1.8em;
     opacity: 0.85;
+    font-size: 0.9rem
   }
 }
 
@@ -144,9 +139,9 @@ export default {
     }
     & /deep/ p {
       font-size: 0.9rem;
-      font-weight: 300;
-      line-height: 2em;
+      line-height: 1.8em;
       margin: 0;
+      opacity: 0.80;
     }
   }
 }
