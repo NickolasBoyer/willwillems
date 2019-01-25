@@ -9,7 +9,10 @@ module.exports = {
     }
   },
   themeConfig: {
-    homeImgSrc: '/img/cover.webp'
+    homeImgSrc: '/img/cover.webp',
+    footerAuthorImgSrc: 'https://pbs.twimg.com/profile_images/1044574924533313536/8sBWGcTJ_400x400.jpg',
+    footerAuthorName: 'Will Willems',
+    footerAuthorDescription: 'Web developer @ Nickolas Boyer and dabbling in digital products. Blogs about software development and more.'
   },
   plugins: {
     'feed': {

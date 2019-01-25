@@ -10,8 +10,11 @@
         span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
         span(v-if="$frontmatter.author") by {{$frontmatter.author}}
       Content.page-content
-      footer
-        p Footer
+      footer.page-footer
+        img.page-footer__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
+        h2.page-footer__author {{$site.themeConfig.footerAuthorName}}
+        p.page-footer__description {{$site.themeConfig.footerAuthorDescription}}
+        // a.page-footer__share-link(href="") Share this
   </div>
 </template>
 
@@ -22,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/vars.scss";
+
 .blog-post-page {
   text-align: center;
 }
@@ -77,4 +82,45 @@ export default {
     font-weight: 500;
   }
 }
+
+.page-footer {
+  position: relative;
+  margin: 60px 20px;
+  padding: 40px 0;
+  border-top: rgba(44, 44, 44, 0.07) 1px solid;
+  border-bottom: rgba(44, 44, 44, 0.07) 1px solid;
+  text-align: left;
+  
+  &__headshot {
+    $headshot-size: 100px;
+
+    position: absolute;
+    top: -1 * ($headshot-size / 2);
+    left: calc(50% - #{($headshot-size / 2)});
+    width: $headshot-size;
+    height: $headshot-size;
+    border-radius: 50%;
+    border: solid $bg-white 10px;
+    background-color: white;
+    object-fit: cover;
+  }
+
+  &__author {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  &__description {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+    max-width: 480px;
+  }
+
+  &__share-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
 </style>
