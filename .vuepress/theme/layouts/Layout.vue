@@ -1,5 +1,6 @@
 <template lang="pug">
   .blog-post-page
+    a.home-link( href="/" ) ↖ Home
     .post-container
       .headshot-image-container
         img( :src="$page.frontmatter.img" )
@@ -26,6 +27,16 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/vars.scss";
+
+.home-link {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  border-bottom: none;
+  opacity: 0.7;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
 
 .blog-post-page {
   text-align: center;
