@@ -72,6 +72,7 @@ export default {
 
 .article-description {
   opacity: 0.7;
+  font-size: 0.8rem;
 }
 
 .page-content {
