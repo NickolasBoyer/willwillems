@@ -78,7 +78,7 @@ export default {
 .page-content {
   // display: inline-block;
   text-align: left;
-  max-width: 720px;
+  max-width: 740px;
   padding: 0 20px;
 
   & /deep/ h1:first-of-type { // hide first title, we're inserting that manually
