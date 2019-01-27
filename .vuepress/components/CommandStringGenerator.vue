@@ -1,5 +1,5 @@
 <template lang="pug">
-  .generator-wrapper
+  #command-generator.generator-wrapper
     .generator-box
       .input-wrapper
         b
