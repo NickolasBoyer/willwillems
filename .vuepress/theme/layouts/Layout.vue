@@ -2,7 +2,7 @@
   .blog-post-page
     a.home-link( href="/" ) ↖ Home
     .post-container
-      .headshot-image-container
+      .headshot-image-container( v-if="$page.frontmatter.img" )
         img( :src="$page.frontmatter.img" )
         img( src="/img/cutout.svg" )
       h1.article-title {{$page.title}}
