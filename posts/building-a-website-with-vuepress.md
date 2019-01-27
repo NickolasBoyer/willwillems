@@ -13,12 +13,13 @@ VuePress is a simple static site generator initially created to support the docs
 
 **Why VuePress:**
 
-- Makes your website blazing fast & SEO friendly
-- Development is an absolute joy
+- Makes your website blazing fast & SEO friendly.
+- Development is super simple and an absolute joy.
 - Very clean separation of your content from the rest of your site.
-- Does not limit you in any way, you are for example still able to create routes to pages completely Vue based without any markdown and create anything you also would be able on a normal Vue project.
+- Provides a full-fledged Vue instance no different from normal development. You are still able to create custom routes, use Vue plugins, anything that you would be able to normally.
 - Flexible plugin API which, for example, I am using to automatically generate an RSS feed for my blog every time I update the content.
-- Use Markdown with markdown-it and its ecosystem + being able to use Vue inside your markdown
+- Use Markdown with markdown-it and its extensive ecosystem.
+- Being able to use Vue components inside your markdown.
 
 ## Who this guide is for
 
@@ -45,7 +46,7 @@ To very briefly describe how this will end up working:
 
 ## Setup
 
-Ok, let's get started, first of we'll do al the usual stuff:
+Ok, let's get started, first off we'll do al the usual stuff:
 
 - Create the project folder `mkdir my-project && cd my-project`
 - Create a valid `package.json` file with `npm init`
@@ -57,7 +58,7 @@ If you don't want to copy all of that and to demonstrate the use of Vue componen
 
 Now let's get to the VuePress specific stuff:
 
-First of, add the VuePress package itself with `npm i -D vuepress`
+First off, add the VuePress package itself with `npm i -D vuepress`
 
 ::: warning
 In this guide we are using VuePress v1 so depending on when you are reading this you might have to install `vuepress@next` to get the proper version.
@@ -86,7 +87,18 @@ my-project
 |--package.json
 ```
 
-The `.vuepress` directory is going to be the backbone of this project containing all the files concerning you website besides the actual content itself, this will be placed in the root of the project folder. 
+The `.vuepress` directory is going to be the backbone of this project containing all the files concerning your website besides the actual content itself, this will be placed in the root of the project folder. 
+
+::: tip Wait what is in that weird folder?
+Basically the `.vuepress` directory will contain anything Vue related:
+
+- If you want to use a custom theme it will be in there in the `theme` folder
+- If you want to use Vue components inside your markdown you'll place them there in the `components` folder
+- If you want to add custom routes you can do so there using the `enhanceApp.js` file.
+- If you want to tweak your markdown settings they will be available in there in the `config.js` file.
+
+This creates a very clean separation of your Vue related files and everything outside it (your markdown content).
+:::
 
 For some more info about this folder and what it will contain [check this out](https://vuepress.vuejs.org/guide/directory-structure.html).
 
@@ -129,6 +141,18 @@ And some more content
 Now it's time to reap the fruits of our labour, if you've done everything correctly you should now be able to execute `npm run dev` and check out your first webpage!
 
 If everything looks good you can generate your new webpage using `npm run build`.
+
+::: tip Where does my  markdown content end up?
+
+The way VuePress routes your compiled markdown files is very straightforward, with the exemption of `[README.md](http://readme.md)` which gets turned into an `index.html` file the rest of the content can be found at their respective position inside the project. For example:
+
+`/about.md` → `/about.html`
+
+`/posts/vuepress-rocks.md` → `/posts/vuepress-rocks.md`
+
+`/posts/README.md` → `/posts`
+
+:::
 
 <!-- ## General Tips:
 
