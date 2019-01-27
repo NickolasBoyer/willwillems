@@ -84,6 +84,7 @@ p > code, li > code {
 // styling for custom containers (warning, tip, danger)
 .custom-block {
   $textColor: #2c3e50;
+  font-size: 0.9em;
 
   .custom-block-title {
     font-weight: 600;
