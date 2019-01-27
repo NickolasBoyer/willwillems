@@ -154,6 +154,10 @@ The way VuePress routes your compiled markdown files is very straightforward, wi
 
 :::
 
+## Using static assets
+
+I can see why the VuePress team did this but I do hope there will be an option to change the current location as is the case with the output directory for the build. Currently your static assets should be placed inside `.vuepress/public` and they will be available at the root of your project.
+
 <!-- ## General Tips:
 
 - If something is not working or changing during development restart the dev server.
