@@ -1,21 +1,23 @@
 <template lang="pug">
   .blog-post-page
     a.home-link( href="/" ) ↖ Home
+    img.cover-image( :src="$page.frontmatter.img" )
     .post-container
-      .headshot-image-container( v-if="$page.frontmatter.img" )
-        img( :src="$page.frontmatter.img" )
-        img( src="/img/cutout.svg" )
-      h1.article-title {{$page.title}}
-      p.article-description
-        span(v-if="$frontmatter.date") {{$frontmatter.date}} • 
-        span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
-        span(v-if="$frontmatter.author") by {{$frontmatter.author}}
-      Content.page-content
-      footer.page-footer
-        img.page-footer__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
-        h2.page-footer__author {{$site.themeConfig.footerAuthorName}}
-        p.page-footer__description {{$site.themeConfig.footerAuthorDescription}}
-        // a.page-footer__share-link(href="") Share this
+      .post
+        //.headshot-image-container( v-if="$page.frontmatter.img" )
+          img( :src="$page.frontmatter.img" )
+          img( src="/img/cutout.svg" )
+        h1.article-title {{$page.title}}
+        p.article-description
+          span(v-if="$frontmatter.date") {{$frontmatter.date}} • 
+          span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
+          span(v-if="$frontmatter.author") by {{$frontmatter.author}}
+        Content.page-content
+        footer.page-footer
+          img.page-footer__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
+          h2.page-footer__author {{$site.themeConfig.footerAuthorName}}
+          p.page-footer__description {{$site.themeConfig.footerAuthorDescription}}
+          // a.page-footer__share-link(href="") Share this
   </div>
 </template>
 
@@ -36,17 +38,44 @@ export default {
   opacity: 0.7;
   font-weight: bold;
   font-size: 0.8rem;
+  background-color: white;
+  padding: 3px 6px;
+  border-radius: 3px;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .blog-post-page {
   text-align: center;
 }
 
+.cover-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
 .post-container {
   display: inline-block;
-  padding-top: 100px;
+  padding: 80px 100px;
+  margin-top: -100px;
   overflow-x: hidden;
   max-width: 100%; // never bigger than parent
+  background-color: $bg-white;
+
+  @media (max-width: $sm-break-point) {
+    width: 100%;
+    padding: 40px 20px;
+  }
+}
+
+.post {
+  display: inline-block;
+  text-align: left;
+  width:100%;
+  max-width: 800px;
 }
 
 .headshot-image-container {
@@ -79,7 +108,6 @@ export default {
   // display: inline-block;
   text-align: left;
   max-width: 740px;
-  padding: 0 20px;
 
   & /deep/ h1:first-of-type { // hide first title, we're inserting that manually
     display: none;
@@ -92,6 +120,10 @@ export default {
   & /deep/ p, & /deep/ li {
     line-height: 1.8em;
     font-weight: 500;
+  }
+
+  & /deep/ h2 {
+    margin-top: 1.7em;
   }
 }
 

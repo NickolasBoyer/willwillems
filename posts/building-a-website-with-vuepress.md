@@ -2,7 +2,7 @@
 duration: 8 min
 author: Will Willems
 date: 01-23-19
-img: 'https://source.unsplash.com/Wiu3w-99tNg/800x800'
+img: 'https://source.unsplash.com/Wiu3w-99tNg/'
 lang: en-US
 
 ---
