@@ -19,14 +19,18 @@
       .article-list
         h1.article-list__title Writings
           span.article-list__title-beta-tag beta
+        // .tag-container
+          span.tag • Vue
         .article-card-container
-          span( v-for="page in previewPosts" )
-            ArticlePreviewCard(
+          a.article-link( v-for="page in previewPosts" :href="page.path" )
+            b.article-link__title {{page.title}}
+            span.article-link__date {{page.frontmatter.date}}
+            // ArticlePreviewCard(
               :link="page.path"
               :title="page.title"
               :img="page.frontmatter.img"
               :date="page.frontmatter.date"
-          )
+              )
 </template>
 
 <script>
@@ -43,7 +47,7 @@ export default {
     previewPosts () {
       return this.$site.pages
         .filter(post => !!post.frontmatter.img)
-        .slice(0,3)
+        .slice(0, 10)
     }
   }
 }
@@ -164,8 +168,40 @@ export default {
 
 .article-card-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  overflow-x: scroll;
+  // overflow-x: scroll;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .article-link {
+    margin: .5em 0;
+    border-bottom: none;
+
+    &__title {
+      border-bottom: 2px solid $prim-gold;;
+    }
+
+    &__date {
+      float: right;
+      opacity: 0.4;
+      font-size: 0.8em;
+      font-weight: 100;
+    }
+  }
+
+}
+
+.tag-container {
+  text-align: center;
+  margin: -10px 0 10px 0;
+
+  .tag {
+    font-size: .7em;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background-color: pink;
+    font-weight: bold;
+  }
 }
 </style>
