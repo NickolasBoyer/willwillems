@@ -3,7 +3,7 @@
     a.home-link( href="/" ) ↖ Home
     img.cover-image( :src="$page.frontmatter.img" )
     .post-container
-      .post
+      article.post
         //.headshot-image-container( v-if="$page.frontmatter.img" )
           img( :src="$page.frontmatter.img" )
           img( src="/img/cutout.svg" )
