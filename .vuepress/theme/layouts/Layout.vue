@@ -7,17 +7,18 @@
         //.headshot-image-container( v-if="$page.frontmatter.img" )
           img( :src="$page.frontmatter.img" )
           img( src="/img/cutout.svg" )
-        h1.article-title {{$page.title}}
-        p.article-description
-          span(v-if="$frontmatter.date") {{$frontmatter.date}} • 
-          span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
-          span(v-if="$frontmatter.author") by {{$frontmatter.author}}
+        header
+          h1.article-title {{$page.title}}
+          p.article-description
+            span(v-if="$frontmatter.date") {{$frontmatter.date}} • 
+            span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
+            span(v-if="$frontmatter.author") by {{$frontmatter.author}}
         Content.page-content
-        footer.page-footer
-          img.page-footer__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
-          h2.page-footer__author {{$site.themeConfig.footerAuthorName}}
-          p.page-footer__description {{$site.themeConfig.footerAuthorDescription}}
-          // a.page-footer__share-link(href="") Share this
+        footer.article-footer
+          img.article-footer__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
+          h2.article-footer__author {{$site.themeConfig.footerAuthorName}}
+          p.article-footer__description {{$site.themeConfig.footerAuthorDescription}}
+          // a.article-footer__share-link(href="") Share this
   </div>
 </template>
 
@@ -127,7 +128,7 @@ export default {
   }
 }
 
-.page-footer {
+.article-footer {
   position: relative;
   margin: 60px 20px;
   padding: 40px 0;
