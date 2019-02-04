@@ -34,6 +34,11 @@
             )
         p
     footer.page-footer
+      a( href="mailto:me@willwillems.com" ) Contact
+      span •
+      a( href="/rss.xml" ) RSS
+      span •
+      a( href="https://twitter.com/rut_will" ) Twitter
 </template>
 
 <script>
@@ -243,6 +248,20 @@ export default {
 }
 
 .page-footer {
-  height: 20vh;
+  padding: 4em 0;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 0.8rem;
+
+  a {
+    font-weight: bold;
+    border-bottom: solid grey 1px;
+    margin: 0 .4em;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: solid $prim-gold 2px;
+    }
+  }
 }
 </style>
