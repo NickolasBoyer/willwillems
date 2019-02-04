@@ -23,15 +23,16 @@
         span.tag • Vue
       .article-link-container
         a.article-link( v-for="page in previewPosts" :href="page.path" )
-          b.article-link__title {{page.title}}
-          br
-          span.article-link__date {{getHumanReadableDate(page.frontmatter.date)}}
+          .article-link__title 
+            b {{page.title}}
+          .article-link__date {{getHumanReadableDate(page.frontmatter.date)}}
           // ArticlePreviewCard(
             :link="page.path"
             :title="page.title"
             :img="page.frontmatter.img"
             :date="page.frontmatter.date"
             )
+        p
     footer.page-footer
 </template>
 
@@ -180,7 +181,7 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   // overflow-x: scroll;
-  width: 600px;
+  width: 700px;
   max-width: calc(100vw - 40px);
   margin: 0 20px;
   text-align: left;
@@ -190,17 +191,39 @@ export default {
   .article-link {
     margin: .3em 0;
     border-bottom: none;
+    line-height: 1.5em;
+    vertical-align: middle;
 
     &__title {
-      line-height: 1.5em;
-      border-bottom: 2px solid $prim-gold;
+      text-align: left;
+      width: calc(100% - 140px - 40px);
+      float: right;
+
+      @media (max-width: 600px) {
+        float: initial;
+        width: initial;
+      }
+
+      b {
+        border-bottom: 2px solid $prim-gold;
+      }
     }
 
     &__date {
-      // float: right;
+      text-align: right;
       opacity: 0.6;
       font-size: 0.7em;
       font-weight: 100;
+      width: 140px;
+      float: left;
+      margin: 0 20px;
+
+      @media (max-width: 600px) {
+        text-align: left;
+        margin: 0 0px;
+        float: initial;
+        width: initial;
+      }
     }
   }
 
