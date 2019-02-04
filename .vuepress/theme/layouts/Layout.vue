@@ -10,9 +10,10 @@
         header
           h1.article-title {{$page.title}}
           p.article-description
-            span(v-if="$frontmatter.date") {{$frontmatter.date}} • 
-            span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read • 
-            span(v-if="$frontmatter.author") by {{$frontmatter.author}}
+            img.article-description__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
+            span(v-if="$frontmatter.author") {{$frontmatter.author}} • 
+            span(v-if="$frontmatter.date") {{getHumanReadableDate($frontmatter.date)}} • 
+            span(v-if="$frontmatter.duration") {{$frontmatter.duration}} read
         Content.page-content
         footer.article-footer
           img.article-footer__headshot( :src="$site.themeConfig.footerAuthorImgSrc" )
@@ -24,7 +25,12 @@
 
 <script>
 export default {
-  
+  name: "Layout",
+  methods: {
+    getHumanReadableDate (dateArg) {
+      return (new Date(dateArg)).toUTCString().slice(5, 16)
+    }
+  }
 }
 </script>
 
@@ -99,11 +105,25 @@ export default {
 
 .article-title {
   max-width: 760px;
+  margin: .4em 0;
 }
 
 .article-description {
-  opacity: 0.7;
-  font-size: 0.8rem;
+  font-size: .9rem;
+  margin: 1.5rem 0;
+
+  &__headshot {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+
+  span {
+    opacity: 0.6;
+  }
 }
 
 .page-content {
@@ -116,7 +136,8 @@ export default {
   }
 
   & /deep/ p:first-of-type {
-    font-size: 1.1em;
+    font-weight: 600;
+    padding-bottom: 1em;
   }
 
   & /deep/ p, & /deep/ li {
