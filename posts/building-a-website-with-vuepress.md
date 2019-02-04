@@ -50,9 +50,9 @@ Ok, let's get started, first off we'll do al the usual stuff:
 
 - Create the project folder `mkdir my-project && cd my-project`
 - Create a valid `package.json` file with `npm init`
-- Initialise Git with `git init`
+- Initialize Git with `git init`
 
-If you don't want to copy all of that and to demonstrate the use of Vue components inside markdown you can fill in your project name here, copy the command below and thats that!
+If you don't want to copy all of that and to demonstrate the use of Vue components inside markdown you can fill in your project name here, copy the command below and that's that!
 
 <CommandStringGenerator/>
 
@@ -138,7 +138,7 @@ And some more content
 - for example
 ```
 
-Now it's time to reap the fruits of our labour, if you've done everything correctly you should now be able to execute `npm run dev` and check out your first webpage!
+Now it's time to reap the fruits of our labor, if you've done everything correctly you should now be able to execute `npm run dev` and check out your first webpage!
 
 If everything looks good you can generate your new webpage using `npm run build`.
 
@@ -158,6 +158,6 @@ The way VuePress routes your compiled markdown files is very straightforward, wi
 
 I can see why the VuePress team did this but I do hope there will be an option to change the current location as is the case with the output directory for the build. Currently your static assets should be placed inside `.vuepress/public` and they will be available at the root of your project.
 
-## Thats it!
+## That's it!
 
 Well done! You probably got your first VuePress site up and running, you probably want to create a custom theme though. No problem, [read more about that here](https://willwillems.com/posts/write-a-custom-vuepress-theme.html).
