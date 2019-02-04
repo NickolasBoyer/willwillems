@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Will Willems',
+  title: 'Will Willems\' Blog',
   description: 'The personal page and blog of Will Willems',
   dest: "dist",
   markdown: {
@@ -18,6 +18,16 @@ module.exports = {
     'feed': {
       canonical_base: 'https://willwillems.com',
       posts_directories: ['/posts/'],
+    },
+    'autometa': {
+      site: {
+        name   : 'Will Willems\' Blog',
+      },
+      author: {
+        name   : 'Will Willems',
+        twitter: 'will_rut',
+      },
+      canonical_base: 'https://willwillems.com',
     }
   }
 }
