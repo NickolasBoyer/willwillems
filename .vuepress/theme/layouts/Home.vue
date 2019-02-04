@@ -184,10 +184,11 @@ export default {
   max-width: calc(100vw - 40px);
   margin: 0 20px;
   text-align: left;
+  font-family: 'Courier', Helvetica, 'SF Pro Text', Arial, sans-serif;
 
 
   .article-link {
-    margin: .4em 0;
+    margin: .3em 0;
     border-bottom: none;
 
     &__title {
