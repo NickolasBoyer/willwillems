@@ -1,6 +1,6 @@
 <template lang="pug">
   .home
-    .section.welcome-section
+    section.welcome-section
       .personal-image
         img( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover.jpg'" )
       .text-section
@@ -16,21 +16,23 @@
       #contact.info-section
         .info-section__number 03
         Content( slot-key="contact" ).info-section__body
-      .article-list
-        h1.article-list__title Writings
-          span.article-list__title-beta-tag beta
-        // .tag-container
-          span.tag • Vue
-        .article-card-container
-          a.article-link( v-for="page in previewPosts" :href="page.path" )
-            b.article-link__title {{page.title}}
-            span.article-link__date {{page.frontmatter.date}}
-            // ArticlePreviewCard(
-              :link="page.path"
-              :title="page.title"
-              :img="page.frontmatter.img"
-              :date="page.frontmatter.date"
-              )
+    section.article-section
+      h1.article-section__title Writings
+        span.article-section__title-beta-tag beta
+      // .tag-container
+        span.tag • Vue
+      .article-link-container
+        a.article-link( v-for="page in previewPosts" :href="page.path" )
+          b.article-link__title {{page.title}}
+          br
+          span.article-link__date {{getHumanReadableDate(page.frontmatter.date)}}
+          // ArticlePreviewCard(
+            :link="page.path"
+            :title="page.title"
+            :img="page.frontmatter.img"
+            :date="page.frontmatter.date"
+            )
+    footer.page-footer
 </template>
 
 <script>
@@ -48,6 +50,11 @@ export default {
       return this.$site.pages
         .filter(post => !!post.frontmatter.img)
         .slice(0, 10)
+    }
+  },
+  methods: {
+    getHumanReadableDate (dateArg) {
+      return (new Date(dateArg)).toUTCString().slice(5, 16)
     }
   }
 }
@@ -150,10 +157,12 @@ export default {
   }
 }
 
-.article-list {
+.article-section {
   grid-area: blog-posts;
-  padding-top: 50px;
-
+  padding: 30px 0;
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+  
   &__title {
     text-align: center;
     margin: 20px 0;
@@ -166,26 +175,30 @@ export default {
   }
 }
 
-.article-card-container {
-  display: flex;
+.article-link-container {
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
   // overflow-x: scroll;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 600px;
+  max-width: calc(100vw - 40px);
+  margin: 0 20px;
+  text-align: left;
+
 
   .article-link {
-    margin: .5em 0;
+    margin: .4em 0;
     border-bottom: none;
 
     &__title {
-      border-bottom: 2px solid $prim-gold;;
+      line-height: 1.5em;
+      border-bottom: 2px solid $prim-gold;
     }
 
     &__date {
-      float: right;
-      opacity: 0.4;
-      font-size: 0.8em;
+      // float: right;
+      opacity: 0.6;
+      font-size: 0.7em;
       font-weight: 100;
     }
   }
@@ -203,5 +216,9 @@ export default {
     background-color: pink;
     font-weight: bold;
   }
+}
+
+.page-footer {
+  height: 20vh;
 }
 </style>
