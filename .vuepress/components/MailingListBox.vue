@@ -7,6 +7,8 @@
       form( action="https://nickolasboyer.us12.list-manage.com/subscribe/post?u=55a5fbebab9bb447102de7229&amp;id=52a0ae8f45" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate )
         input( v-model="userName" placeholder="First name" type="text" name="LNAME" id="mce-LNAME" )
         input( v-model="userEmail" placeholder="Email" type="email" name="EMAIL" id="mce-EMAIL" )
+        // add to proper group
+        input( type="checkbox" value="1" style="display:none" name="group[15817][1]" id="mce-group[15817]-15817-0" checked)
         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_55a5fbebab9bb447102de7229_52a0ae8f45" tabindex="-1" value=""></div>
         .button-wrapper
