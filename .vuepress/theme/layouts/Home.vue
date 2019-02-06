@@ -166,7 +166,7 @@ export default {
 .article-section {
   grid-area: blog-posts;
   padding: 30px 0;
-  background-color: #fbf7f3;
+  // background-color: #fbf9f7;
   text-align: center;
   
   &__title {
