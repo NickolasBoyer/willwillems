@@ -18,7 +18,7 @@ I'm not claiming these dishes are the best ones you'll find in the city, though 
 - Bali - Eggs Benedict @ [Full Cirlce](https://www.fullcirclebyexpatroasters.com/)
 
 **🇹🇭Thailand**
-- Chiang Mai - Cappuchino & Bostock @ [Flour Flour Slice](http://flourflour.cafe/)
+- Chiang Mai - Cappuccino & Bostock @ [Flour Flour Slice](http://flourflour.cafe/)
 
 **🇬🇧London**
 - London - Daily menu @ [The Corner Room](https://www.townhallhotel.com/food-and-drink/corner_room)
