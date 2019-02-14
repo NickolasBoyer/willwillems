@@ -9,11 +9,11 @@ Designer developer and web development consultant @NickolasBoyer. I’m mainly w
 ::: slot about
 Who am I? 
 
-Well I am many things, I am passionate about digital design and development which is a big part of my live. 
+Well I am many things, I am passionate about digital design and development which plays a big part of my live. 
 
-I like traveling, long-term. I am not a tourist.
+I like traveling, long-term. I am rarely a tourist.
 
-I am an avid kitesurfer and runner, I also like squash but to be honest I still really suck. 
+I am an avid kitesurfer and runner, I also like squash but to be honest even calling me an amateur would probably be gracious. 
 
 I am a big fan of meditation, mindfulness and stoicism. A few of my favourite authors: Tim Urban, Seneca the Younger, Sam Harris, Jesse Frederik & Tim Ferriss.
 
@@ -21,7 +21,7 @@ Finally I am an amateur hobbyist IOT electrical engineer/tinkerer and I occasion
 
 I am not sure, I love doubt, most people are too sure about things, strong opinions held loosely, I love that.
 
-I am a work in progress, I love to take on ambitious projects that venture into area’s I’m unfamiliar with. I’m really interested in the intersection of web technologies with other areas such as sociology-anthropology and music.
+I am a work in progress, I love to take on ambitious projects that venture into areas I’m unfamiliar with. I’m really interested in the intersection of web technologies with other fields such as sociology/anthropology and music.
 
 I love a challenge, I try to steer towards discomfort. It’s not about what pleasures you want in your live it’s about what kind of struggles you want.
 
