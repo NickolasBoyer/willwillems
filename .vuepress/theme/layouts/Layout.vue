@@ -37,6 +37,11 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/vars.scss";
 
+.blog-post-page {
+  background-color: rgb(241, 243, 248);
+  text-align: center;
+}
+
 .home-link {
   position: absolute;
   top: 20px;
@@ -54,15 +59,10 @@ export default {
   }
 }
 
-.blog-post-page {
-  text-align: center;
-}
-
 .cover-image {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  background-color: rgb(241, 243, 248);
 }
 
 .post-container {

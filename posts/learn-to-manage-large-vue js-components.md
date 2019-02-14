@@ -1,6 +1,7 @@
 ---
 duration: 4 min
 author: Will Willems
+category: Vue.js
 date: 11/20/2018
 img: '/img/vue-components-thumb.png'
 lang: en-US

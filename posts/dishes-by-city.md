@@ -1,6 +1,7 @@
 ---
 duration: 4 min
 author: Will Willems
+category: Personal
 date: 02/15/2019
 img: 'https://source.unsplash.com/N_Y88TWmGwA/'
 image: 'https://source.unsplash.com/N_Y88TWmGwA/'

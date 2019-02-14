@@ -1,6 +1,7 @@
 ---
 duration: 12 min
 author: Will Willems
+category: VuePress
 date: 01/28/2019
 img: 'https://source.unsplash.com/mIylM2RC16M/800x800'
 lang: en-US

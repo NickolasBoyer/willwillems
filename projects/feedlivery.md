@@ -5,6 +5,8 @@ date: 02/10/2019
 icon: '/img/icon/rssdigest.svg'
 lang: en-US
 
+projectUrl: https://feedlivery.com
+
 ---
 
 # Feedlivery
