@@ -15,7 +15,7 @@ I like traveling, long-term. I am not a tourist.
 
 I am an avid kitesurfer and runner, I also like squash but to be honest I still really suck. 
 
-I am a big fan of meditation, mindfulness and stoicism. A few of my favourite authors: Tim Urban, Seneca the Young, Sam Harris, Jesse Frederik & Tim Ferriss.
+I am a big fan of meditation, mindfulness and stoicism. A few of my favourite authors: Tim Urban, Seneca the Younger, Sam Harris, Jesse Frederik & Tim Ferriss.
 
 Finally I am an amateur IOT electrical engineer and occasionally produce some futuristic funky tech tunes. 
 
