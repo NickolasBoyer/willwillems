@@ -17,7 +17,7 @@
             .welcome-text
               strong.welcome-text__sub-header Hi there, I'm
               h1.welcome-text__title
-                span( style="color: lightgray;" ) Will
+                span Will
                 br
                 span Willems
               Content.welcome-text__body 
@@ -88,6 +88,7 @@ export default {
 @import "../styles/vars.scss";
 
 $bg-color: black;
+$neutral-color: rgb(233, 233, 233);
 $accent-color: #F5A623;
 
 .mobile-padding { padding: 0 10px; }
@@ -145,6 +146,10 @@ $accent-color: #F5A623;
     margin: 10px 0 0 0;
     font-size: 6rem;
     color: inherit;
+
+    span:first-child {
+      color: $neutral-color;
+    }
   }
 
   &__body {
@@ -169,7 +174,7 @@ $accent-color: #F5A623;
 
 
 .article-link {
-  color: lightgray;
+  color: $neutral-color;
   margin: .3em 0;
   border-bottom: none;
   line-height: 2em;
