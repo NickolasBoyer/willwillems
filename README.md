@@ -17,7 +17,7 @@ I am an avid kitesurfer and runner, I also like squash but to be honest I still 
 
 I am a big fan of meditation, mindfulness and stoicism. A few of my favourite authors: Tim Urban, Seneca the Younger, Sam Harris, Jesse Frederik & Tim Ferriss.
 
-Finally I am an amateur IOT electrical engineer and occasionally produce some futuristic funky tech tunes. 
+Finally I am an amateur hobbyist IOT electrical engineer/tinkerer and I occasionally produce some futuristic funky tech tunes. 
 
 I am not sure, I love doubt, most people are too sure about things, strong opinions held loosely, I love that.
 
