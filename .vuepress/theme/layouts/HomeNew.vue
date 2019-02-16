@@ -46,8 +46,15 @@
           //- p.about-text-block If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
           //- p.about-text-block By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.
           //- p.about-text-block If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children.
-      // section.section.about-section( id="#contact" )
+      section.section.about-section( id="#contact" )
         h1.section__header Contact
+        .section__body.section__body--horizontal-flow.contact-section
+          marquee( behaviour="slide" )
+            template(v-for="i in 5")
+              a( href="mailto:me@willwillems.com" )
+                span( style="font-size: 1.4em;" ) ✉︎ 
+                | Email me 
+              span • 
       footer.page-footer
         a( href="mailto:me@willwillems.com" ) Contact
         span •
@@ -211,7 +218,7 @@ $accent-color: #F5A623;
   padding-bottom: $size;
   min-width: unset;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(128, 128, 128, 0.2);
   border: none;
   border-radius: 20px;
   margin: 10px;
@@ -243,6 +250,27 @@ $accent-color: #F5A623;
 .about-text-block {
   display: inline-block;
   margin: 10px
+}
+
+.contact-section {
+  font-size: 6rem;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+
+  a {
+    border-bottom: none;
+    transform: scale(1);
+    transition: all 1s linear;
+    transform-origin: left top;
+  }
+
+  a {
+    &:hover {
+      color: red;
+      transform: scale(2);
+    }
+  }
 }
 
 .page-footer {
