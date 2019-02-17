@@ -49,12 +49,16 @@
       section.section.about-section( id="#contact" )
         h1.section__header Contact
         .section__body.section__body--horizontal-flow.contact-section
-          marquee( behaviour="slide" )
-            template(v-for="i in 5")
-              a( href="mailto:me@willwillems.com" )
-                span( style="font-size: 1.4em;" ) ✉︎ 
-                | Email me 
-              span • 
+          .contact-section__text-row--container
+            a( href="mailto:me@willwillems.com" )
+              span( style="font-size: 1.4em;" ) ✉︎ 
+              | Email me 
+            // .contact-section__text-row(v-for="i in 5" :style="`animation-duration: ${Math.random() * 6 + 4}s; animation-delay: ${Math.random() * 2}`")
+              template(v-for="i in 4")
+                a( href="mailto:me@willwillems.com" )
+                  span( style="font-size: 1.4em;" ) ✉︎ 
+                  | Email me 
+                span • 
       footer.page-footer
         a( href="mailto:me@willwillems.com" ) Contact
         span •
@@ -257,6 +261,25 @@ $accent-color: #F5A623;
   width: 100%;
   text-align: center;
   overflow: hidden;
+
+  // &__text-row--container {
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  // }
+
+  &__text-row {
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1em;
+
+    animation: shift 7s linear infinite;
+
+      @keyframes shift {
+        0% { transform: translateX(-25%); }
+        100% { transform: translateX(-50%); }
+      }
+  }
 
   a {
     border-bottom: none;
