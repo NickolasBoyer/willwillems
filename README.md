@@ -1,5 +1,5 @@
 ---
-layout: HomeNew
+layout: Home
 ---
 
 # Will Willems' Blog
