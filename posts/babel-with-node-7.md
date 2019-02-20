@@ -1,6 +1,7 @@
 ---
 duration: 4 min
 author: Will Willems
+category: Development
 date: 09/11/2018
 img: '/img/babel+node-thumb.jpeg'
 lang: en-US

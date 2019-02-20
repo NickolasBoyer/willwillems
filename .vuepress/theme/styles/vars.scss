@@ -1,7 +1,10 @@
 $sm-break-point: 600px;
 $md-break-point: 990px;
 
-$bg-white: white; // #F1F1F1;
+$main-font: Helvetica, 'SF Pro Text', Arial, sans-serif;
+
+$bg-black: black;
+$bg-white: white;
 $txt-black: #202020;
 $title-black: #111111;
 
@@ -9,3 +12,21 @@ $black: #000000;
 $prim-gold: #E4791B;
 $prim-orange: #EE4B11;
 $prim-red: #E12F2F;
+
+$neutral-color: rgb(233, 233, 233);
+$accent-color: #F5A623;
+
+// Hackrr
+// $bg-black: rgb(12, 12, 12);
+// $neutral-color: rgb(238, 238, 238);
+// $accent-color: rgb(84, 184, 59);
+// $main-font: 'Cousine';
+
+// // Strawberry lollypop
+// $bg-black: #EBE0D3;
+// $neutral-color: rgb(54, 54, 54);
+// $accent-color: #F84F50;
+
+// $bg-black: rgb(59, 25, 71);
+// $neutral-color: rgb(219, 158, 66);
+// $accent-color: rgb(235, 88, 120);

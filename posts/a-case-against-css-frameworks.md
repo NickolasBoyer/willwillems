@@ -1,6 +1,7 @@
 ---
 duration: 5 min
 author: Will Willems
+category: Vue.js
 date: 12/13/2018
 img: '/img/css-frameworks-thumb.png'
 lang: en-US
