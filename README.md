@@ -4,7 +4,7 @@ layout: HomeNew
 
 # Will Willems' Blog
 
-Designer developer and web development consultant @NickolasBoyer. I’m mainly working with Vue.js these days with a strong focus on PWA's.
+Designer, developer and web development consultant. I’m currently obsessed with improving static generated Vue.js apps.
 
 ::: slot about
 Who am I? 
