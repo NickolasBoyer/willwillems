@@ -42,23 +42,16 @@
       section.section.about-section( id="#about" )
         h1.section__header About
         Content( slot-key="about" ).section__body
-          //- p.about-text-block This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
-          //- p.about-text-block If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
-          //- p.about-text-block By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.
-          //- p.about-text-block If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children.
-      section.section.about-section( id="#contact" )
+      section.section.contact-section( id="#contact" )
         h1.section__header Contact
-        .section__body.section__body--horizontal-flow.contact-section
-          .contact-section__text-row--container
-            a( href="mailto:me@willwillems.com" )
-              span( style="font-size: 1.4em;" ) ✉︎ 
-              | Email me 
-            // .contact-section__text-row(v-for="i in 5" :style="`animation-duration: ${Math.random() * 6 + 4}s; animation-delay: ${Math.random() * 2}`")
-              template(v-for="i in 4")
-                a( href="mailto:me@willwillems.com" )
-                  span( style="font-size: 1.4em;" ) ✉︎ 
-                  | Email me 
-                span • 
+        .section__body.section__body--horizontal-flow
+          div
+            p
+              a( href="mailto:me@willwillems.com" )
+                span Email me →
+            p
+              a( href="https://twitter.com/will_rut" )
+                span DM me on Twitter →
       footer.page-footer
         a( href="mailto:me@willwillems.com" ) Contact
         span •
@@ -78,6 +71,9 @@ export default {
   },
   components: {
     ArticlePreviewCard
+  },
+  mounted () {
+    // document.referrer
   },
   computed: {
     blogPosts () {
@@ -137,7 +133,6 @@ export default {
 }
 
 .personal-image {
-  color: $accent-color;
   margin: 40px 10px 60px 10px;
 }
 
@@ -184,15 +179,12 @@ export default {
 .article-link {
   color: $neutral-color;
   margin: .3em 0;
-  border-bottom: none;
   line-height: 2em;
 
-  // cursor: url("/img/cursor.png"), auto;
-
   &__title {
-    border-bottom: 2px solid $accent-color;
 
     &:hover {
+      border-bottom: 2px solid;
       animation: spacecake .5s infinite;
 
       @keyframes spacecake {
@@ -223,7 +215,6 @@ export default {
   border: none;
   border-radius: 20px;
   margin: 10px;
-  background-image: url("/img/live.svg");
   background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -253,60 +244,20 @@ export default {
   margin: 10px
 }
 
-.contact-section {
-  font-size: 1rem;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-
-  // &__text-row--container {
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  // }
-
-  &__text-row {
-    white-space: nowrap;
-    margin: 0;
-    line-height: 1em;
-
-    animation: shift 7s linear infinite;
-
-      @keyframes shift {
-        0% { transform: translateX(-25%); }
-        100% { transform: translateX(-50%); }
-      }
-  }
-
-  a {
-    border-bottom: none;
-    transform: scale(1);
-    transition: all 1s linear;
-    transform-origin: left top;
-  }
-
-  a {
-    &:hover {
-      color: red;
-      transform: scale(2);
-    }
-  }
-}
-
 .page-footer {
   padding: 4em 0;
   text-align: center;
-  opacity: 0.6;
   font-size: 0.8rem;
+  opacity: 0.8;
 
   a {
     font-weight: bold;
-    border-bottom: solid grey 1px;
     margin: 0 .4em;
+    opacity: .6;
+    transition: opacity 0.2s linear;
 
     &:hover {
       opacity: 1;
-      border-bottom: solid $accent-color 2px;
     }
   }
 }
