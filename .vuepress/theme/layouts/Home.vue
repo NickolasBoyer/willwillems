@@ -47,11 +47,13 @@
         .section__body.section__body--horizontal-flow
           div
             p
-              a( href="mailto:me@willwillems.com" )
-                span Email me →
+              a.contact-link( href="mailto:me@willwillems.com" )
+                span Email me 
+                div.contact-link__icon →
             p
-              a( href="https://twitter.com/will_rut" )
-                span DM me on Twitter →
+              a.contact-link( href="https://twitter.com/will_rut" )
+                span DM me on Twitter 
+                div.contact-link__icon →
       footer.page-footer
         a( href="mailto:me@willwillems.com" ) Contact
         span •
@@ -242,6 +244,23 @@ export default {
 .about-text-block {
   display: inline-block;
   margin: 10px
+}
+
+.contact-link {
+  &__icon {
+    display: inline-block;
+  }
+  &:hover {
+    .contact-link__icon {
+      animation: jiggle 1s ease-in-out infinite;
+    }
+  }
+
+  @keyframes jiggle {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0px); }
+  }
 }
 
 .page-footer {
