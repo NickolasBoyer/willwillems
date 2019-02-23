@@ -112,7 +112,7 @@ export default {
   // min-height: 100vh;
 
   &__header {
-    font-size: 5rem;
+    font-size: calc(4rem + 2.5vw);
   }
 
   &__body {
