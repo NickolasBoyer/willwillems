@@ -9,7 +9,7 @@ Designer, developer and web development consultant. I’m currently obsessed wit
 ::: slot about
 Who am I? 
 
-Well I am many things, I am passionate about digital design and development which plays a big part of my live. 
+Well... I am many things, I am passionate about digital design and development, which plays a big role in my live. 
 
 I like traveling, long-term. I am rarely a tourist.
 
@@ -19,7 +19,7 @@ I am a big fan of meditation, mindfulness and stoicism. A few of my favourite au
 
 Finally I am an amateur hobbyist IOT electrical engineer/tinkerer and I occasionally produce some futuristic funky tech tunes. 
 
-I am not sure, I love doubt, most people are too sure about things, strong opinions held loosely, I love that.
+I am not sure, I love doubt, most people are too sure about things. Strong opinions held loosely, I love that.
 
 I am a work in progress, I love to take on ambitious projects that venture into areas I’m unfamiliar with. I’m really interested in the intersection of web technologies with other fields such as sociology/anthropology and music.
 
