@@ -38,6 +38,7 @@ export default {
 @import "../styles/vars.scss";
 
 .blog-post-page {
+  color: rgb(51, 51, 51);
   background-color: rgb(241, 243, 248);
   text-align: center;
 }
