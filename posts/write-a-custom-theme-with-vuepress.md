@@ -36,7 +36,7 @@ As you can see there is an optional `theme` folder inside the `.vuepress` direct
 
 We'll start of as simple as possible.
 
-## Creating your fist layout
+## Creating your first layout
 
 The VuePress theming system uses certain `.vue` files to determine how to transform your Markdown pages into HTML. These "layout" files will reside in the `layouts` directory inside your theme folder.
 
