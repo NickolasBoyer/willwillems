@@ -298,4 +298,4 @@ VuePress' hot reloading works pretty well but with some changes it doesn't quite
 
 ## That's it!
 
-Hope you it worked out, I would love to see what you came up with, show me on Twitter!
+I hope everything worked out, I would love to see what you came up with, show me on Twitter!
