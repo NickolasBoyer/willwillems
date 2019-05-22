@@ -5,3 +5,10 @@
   right: 0;
   bottom: 0;
 }
+
+@mixin accent-for($prop) {
+  #{$prop}: $accent-color;
+  @media (prefers-color-scheme: dark) {
+    #{$prop}: $accent-color-dark;
+  }
+}

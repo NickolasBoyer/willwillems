@@ -36,7 +36,7 @@
           a.project-card-container(
             v-for="project in previewProjects" 
             :href="project.frontmatter.projectUrl" 
-            :style="`background-image: url('${project.frontmatter.icon || '/img/icon/rssdigest.svg'}');`"
+            :style="`background-image: url('${darkMode ? (project.frontmatter.iconDark || project.frontmatter.icon) : project.frontmatter.icon}');`"
           )
             .project-card
       section.section.about-section( id="#about" )
@@ -67,7 +67,7 @@ import groupBy from 'lodash/groupBy'
 
 import ArticlePreviewCard from '../components/ArticlePreviewCard.vue'
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   props: {
     msg: String
   },
@@ -87,19 +87,21 @@ export default {
     previewProjects () {
       return this.$site.pages
         .filter(post => post.path.startsWith('/projects/'))
+    },
+    darkMode () {
+      return !!window.matchMedia('(prefers-color-scheme: dark)').matches
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "../styles/vars.scss";
+@import "../styles/mixins.scss";
 
 .mobile-padding { padding: 0 10px; }
 
 .home {
-  color: $accent-color;
   padding: 0; // section blocks take care of padding
   max-width: 960px;
   margin: 0 auto;
@@ -153,7 +155,7 @@ export default {
     color: inherit;
 
     span:first-child {
-      color: $neutral-color;
+      @include accent-for('color');
     }
   }
 
@@ -179,14 +181,13 @@ export default {
 
 
 .article-link {
-  color: $neutral-color;
+  color: inherit;
   margin: .3em 0;
   line-height: 2em;
 
   &__title {
 
     &:hover {
-      border-bottom: 2px solid;
       animation: spacecake .5s infinite;
 
       @keyframes spacecake {

@@ -38,8 +38,8 @@ export default {
 @import "../styles/vars.scss";
 
 .blog-post-page {
-  color: rgb(51, 51, 51);
-  background-color: rgb(241, 243, 248);
+  background-color: $bg-color-light;
+  color: $txt-color-light;
   text-align: center;
 }
 
@@ -51,7 +51,7 @@ export default {
   opacity: 0.7;
   font-weight: bold;
   font-size: 0.8rem;
-  background-color: white;
+  background-color: $bg-color-light;
   padding: 3px 6px;
   border-radius: 3px;
 
@@ -72,7 +72,7 @@ export default {
   margin-top: -100px;
   overflow-x: hidden;
   max-width: 100%; // never bigger than parent
-  background-color: $bg-white;
+  background-color: $bg-color-light;
 
   @media (max-width: $sm-break-point) {
     width: 100%;
@@ -168,7 +168,7 @@ export default {
     width: $headshot-size;
     height: $headshot-size;
     border-radius: 50%;
-    border: solid $bg-white 10px;
+    border: solid $bg-color-light 10px;
     background-color: white;
     object-fit: cover;
   }

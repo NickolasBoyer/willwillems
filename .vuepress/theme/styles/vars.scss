@@ -3,60 +3,56 @@ $md-break-point: 990px;
 
 $main-font: Helvetica, 'SF Pro Text', Arial, sans-serif;
 
-$bg-black: black;
-$bg-white: white;
-$txt-black: #202020;
-$title-black: #111111;
+$bg-color-dark: black;
+$bg-color-light: #ffffff;
+$txt-color-light: #3f3f3f;
+$txt-color-dark: #d4854b;
 
-$black: #000000;
-$prim-gold: #E4791B;
-$prim-orange: #EE4B11;
-$prim-red: #E12F2F;
-
-$neutral-color: rgb(233, 233, 233);
-$accent-color: #F5A623;
+$neutral-color: rgb(51, 51, 51);
+$accent-color: #5d88b1;
+$accent-color-dark: #d43a3a;
 
 // Marine
-// $bg-black: #0c2d7b;
+// $bg-color-dark: #0c2d7b;
 // $neutral-color: #fff;
 // $accent-color: #fff;;
 
 // Linked-in
-// $bg-black: rgb(227, 243, 255);
+// $bg-color-dark: rgb(227, 243, 255);
 // $neutral-color: #2c5fa1;
 // $accent-color: #1e6696;;
 
 // // Purple Velvet
-// $bg-black: #180127;
+// $bg-color-dark: #180127;
 // $neutral-color: #f3e1e1;
 // $accent-color: #ff6035;
 
 // // Nightcrawler
-// $bg-black: rgb(0, 0, 0);
+// $bg-color-dark: rgb(0, 0, 0);
 // $neutral-color: rgb(204, 204, 204);
 // $accent-color: rgb(33, 62, 228);
 
 // // Neoaqua
-// $bg-black: rgb(3, 0, 41);
+// $bg-color-dark: rgb(3, 0, 41);
 // $neutral-color: rgb(173, 219, 228);
 // $accent-color: rgb(38, 203, 224);
 
 // // Formula 1
-// $bg-black: rgb(240, 240, 240);
+// $bg-color-dark: rgb(240, 240, 240);
 // $neutral-color: rgb(85, 85, 85);
 // $accent-color: rgb(231, 73, 53);
 
 // // Hackrr
-// $bg-black: rgb(12, 12, 12);
+// $bg-color-dark: rgb(12, 12, 12);
 // $neutral-color: rgb(238, 238, 238);
 // $accent-color: rgb(84, 184, 59);
 // $main-font: 'Cousine';
 
 // // Strawberry lollypop
-// $bg-black: #EBE0D3;
+// $bg-color-dark: #EBE0D3;
 // $neutral-color: rgb(54, 54, 54);
 // $accent-color: #F84F50;
 
-// $bg-black: rgb(59, 25, 71);
+// $bg-color-dark: rgb(59, 25, 71);
 // $neutral-color: rgb(219, 158, 66);
 // $accent-color: rgb(235, 88, 120);

@@ -4,8 +4,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background-color: $bg-black;
-  // color: $txt-black;
+  background-color: $bg-color-light;
+  color: $txt-color-light;
   font-size: 18px;
 
   // @media (max-width: $sm-break-point) {
@@ -37,9 +37,11 @@ p {
 }
 
 a {
+  @include accent-for('border-bottom-color');
   color: inherit;
   text-decoration: none;
-  border-bottom: 2px solid $accent-color;
+  border-bottom-width: 2.5px;
+  border-bottom-style: solid;
 }
 
 input, button {
@@ -57,8 +59,8 @@ input, button {
 // dark mode
 @media (prefers-color-scheme: dark) {
   body {
-    color: white;
-    background-color: rgb(19, 19, 19);
+    background-color: $bg-color-dark;
+    color: $txt-color-dark;
   }
 
   input, button {
