@@ -74,8 +74,13 @@ export default {
   components: {
     ArticlePreviewCard
   },
+  data () {
+    return {
+      darkMode: false,
+    }
+  },
   mounted () {
-    // document.referrer
+    this.darkMode = !!window.matchMedia('(prefers-color-scheme: dark)').matches
   },
   computed: {
     blogPosts () {
@@ -88,9 +93,6 @@ export default {
       return this.$site.pages
         .filter(post => post.path.startsWith('/projects/'))
     },
-    darkMode () {
-      return process.client ? !!window.matchMedia('(prefers-color-scheme: dark)').matches : false
-    }
   }
 }
 </script>
