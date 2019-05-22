@@ -20,16 +20,47 @@
           h2.article-footer__author {{$site.themeConfig.footerAuthorName}}
           p.article-footer__description {{$site.themeConfig.footerAuthorDescription}}
           // a.article-footer__share-link(href="") Share this
+      .comments( v-if="hackernewsPostId && comments.length" )
+        h2 Comments
+          .beta-tag  beta
+        .comment( v-for="comment in comments")
+          .comment__title {{comment.by}}
+          .comment__body(v-html="comment.text")
+        a.button( :href="hackernewsLink" target="blank" ) Comment
+
   </div>
 </template>
 
 <script>
 export default {
   name: "Layout",
+  data () {
+    return {
+      comments: []
+    }
+  },
+  mounted () {
+    this.getComments()
+  },
   methods: {
     getHumanReadableDate (dateArg) {
       return (new Date(dateArg)).toUTCString().slice(5, 16)
-    }
+    },
+    getComments () {
+      if (!this.hackernewsPostId) return
+      return fetch(`https://hacker-news.firebaseio.com/v0/item/${this.hackernewsPostId}.json`)
+        .then(data => data.json())
+        .then(json => Promise.all(json.kids.map(id => fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`).then(d => d.json()))))
+        .then(comments => this.comments = comments)
+    },
+  },
+  computed: {
+    hackernewsPostId () {
+      return this.$frontmatter.hackernewsPostId
+    },
+    hackernewsLink () {
+      return `https://news.ycombinator.com/item?id=${this.hackernewsPostId}`
+    },
   }
 }
 </script>
@@ -191,4 +222,27 @@ export default {
   }
 }
 
+.beta-tag {
+  display: inline;
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: rgb(238, 66, 66);
+}
+.comment {
+  max-width: 800px;
+  text-align: left;
+
+  &__title {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 2em;
+    padding: 0 24px;
+  }
+
+  &__body {
+    font-size: 0.8rem;
+    opacity: 1;
+    padding: 18px 24px;
+  }
+}
 </style>
