@@ -89,7 +89,7 @@ export default {
         .filter(post => post.path.startsWith('/projects/'))
     },
     darkMode () {
-      return !!window.matchMedia('(prefers-color-scheme: dark)').matches
+      return window ? !!window.matchMedia('(prefers-color-scheme: dark)').matches : false
     }
   }
 }
