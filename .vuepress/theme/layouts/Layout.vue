@@ -70,7 +70,7 @@ export default {
 
 .blog-post-page {
   background-color: $bg-color-light;
-  color: $txt-color-light;
+  color: $neutral-color;
   text-align: center;
 }
 
