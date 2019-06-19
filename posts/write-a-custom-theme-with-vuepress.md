@@ -141,6 +141,8 @@ Besides the `layouts/Layout.vue` file there is one more layout file that has a p
 
 ## EnhanceApp file, creating custom routes and importing custom styles
 
+There are several ways to modify the more *under-the-hood* behaviour of your vuepress app. We can do this by modifying the `EnhanceApp.js` file which is located at the root of the theme folder.
+
 ### Importing custom styles
 
 You'll probably want to define some global styles for your website, there are multiple ways to approach this but I'll show you my preferred way and then you can customise from there if you want to.
@@ -271,7 +273,7 @@ In order for custom containers to display properly you can either write your own
 This is probably going to be available as a config option in the future but currently you can hide them by using this CSS snippet:
 
 ``` css
-svg.icon.outbound {
+svg.icon.outbound, .header-anchor {
   display: none;
 }
 ```
