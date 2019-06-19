@@ -12,9 +12,9 @@ lang: en-US
 
 VuePress offers a very solid system to integrate your own theme into a project and it is a lot easier than you might think.
 
-::: warning
+::: info
 
-This article is still a draft, some things might not be 100% correct, if you read something that doesn't seem right feel free to reach out to me trough email or twitter.
+If you don't want to go trough all of this manually there is an example available [here](https://github.com/NickolasBoyer/vuepressblogstarter).
 
 :::
 
