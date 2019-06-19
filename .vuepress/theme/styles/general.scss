@@ -57,17 +57,17 @@ input, button {
 }
 
 // dark mode
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: $bg-color-dark;
-    color: $txt-color-dark;
-  }
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: $bg-color-dark;
+//     color: $txt-color-dark;
+//   }
 
-  input, button {
-    background-color: #3A3A3A;
-    color: rgba(255, 255, 255, 0.6);
-  }
-}
+//   input, button {
+//     background-color: #3A3A3A;
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+// }
 
 // vuepress specific
 

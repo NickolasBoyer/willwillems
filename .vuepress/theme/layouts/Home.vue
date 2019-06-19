@@ -76,11 +76,11 @@ export default {
   },
   data () {
     return {
-      darkMode: false,
+      darkMode: true,
     }
   },
   mounted () {
-    this.darkMode = !!window.matchMedia('(prefers-color-scheme: dark)').matches
+    // this.darkMode = !!window.matchMedia('(prefers-color-scheme: dark)').matches
   },
   computed: {
     blogPosts () {
