@@ -9,7 +9,7 @@ Designer, developer and web development consultant. I’m currently obsessed wit
 ::: slot about
 Who am I? 
 
-Well... I am many things, I am passionate about digital design and development, which plays a big role in my live. 
+Well... I am many things, I am passionate about digital design and development, which plays a big role in my life. 
 
 I like traveling, long-term. I am rarely a tourist.
 
