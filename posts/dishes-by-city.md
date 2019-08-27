@@ -31,5 +31,5 @@ I'm not claiming these dishes are the best ones you'll find in the city, though 
 **🇮🇹 Italy**
 - Rome, Trastevere - Daily menu @ [Tastevere Kmzero](https://www.facebook.com/tastevere.kmzero)
 
-**🇮🇹 Poland**
+**🇵🇱 Poland**
 - Kraków, Kazimierz - Vegan Omakase @ [Youmiko Sushi](https://www.facebook.com/YoumikoSushi)
