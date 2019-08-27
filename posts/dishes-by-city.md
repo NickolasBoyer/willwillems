@@ -20,6 +20,7 @@ I'm not claiming these dishes are the best ones you'll find in the city, though 
 
 **🇹🇭 Thailand**
 - Chiang Mai, Nimman - Cappuccino & Bostock @ [Flour Flour Slice](http://flourflour.cafe/)
+- Bangkok, Sukhumvit - Cappuccino & Smashed Avo @ [ROAST](https://roastbkk.com)
 
 **🇬🇧 London**
 - London - Daily menu @ [The Corner Room](https://www.townhallhotel.com/food-and-drink/corner_room)
