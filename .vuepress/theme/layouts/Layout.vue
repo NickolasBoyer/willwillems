@@ -69,7 +69,7 @@ export default {
 @import "../styles/vars.scss";
 
 .blog-post-page {
-  background-color: $bg-color-light;
+  background-color: white;
   color: $neutral-color;
   text-align: center;
 }
@@ -104,6 +104,7 @@ export default {
   overflow-x: hidden;
   max-width: 100%; // never bigger than parent
   background-color: white;
+  font-family: Helvetica Nue, SF Pro Text, Arial, sans-serif;
 
   @media (max-width: $sm-break-point) {
     width: 100%;
