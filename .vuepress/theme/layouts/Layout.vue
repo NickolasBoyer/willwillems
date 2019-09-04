@@ -103,7 +103,7 @@ export default {
   margin-top: -100px;
   overflow-x: hidden;
   max-width: 100%; // never bigger than parent
-  background-color: $bg-color-light;
+  background-color: white;
 
   @media (max-width: $sm-break-point) {
     width: 100%;
