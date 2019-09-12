@@ -5,9 +5,8 @@
         .welcome-text
           strong.welcome-text__sub-header Hi there, I'm
           h1.welcome-text__title
-            span Will
-            br
-            span Willems
+            div Will
+            div Willems
           Content.welcome-text__body
         img.personal-image( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover.png'" )
       section.section.article-sections( id="#articles" )
@@ -152,9 +151,10 @@ export default {
   &__title {
     margin: 10px 0 0 0;
     font-size: 6rem;
+    line-height: 1em;
     color: inherit;
 
-    span:first-child {
+    div:first-child {
       @include accent-for('color');
     }
   }
