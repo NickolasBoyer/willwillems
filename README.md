@@ -1,5 +1,8 @@
 ---
 layout: Home
+meta:
+  - name: "theme-color"
+  - content: "#fff4e5"
 ---
 
 # Will Willems' Blog
