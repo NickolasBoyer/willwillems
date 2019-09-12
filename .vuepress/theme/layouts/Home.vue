@@ -102,7 +102,6 @@ export default {
 
 .section {
   padding: 4rem 0;
-  // min-height: 100vh;
 
   &__header {
     font-size: calc(4rem + 2.5vw);
@@ -128,7 +127,8 @@ export default {
 }
 
 .personal-image {
-  max-width: 500px;
+  width: 500px;
+  max-width: 100%;
   object-fit: contain
 }
 
