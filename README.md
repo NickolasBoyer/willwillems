@@ -4,7 +4,7 @@ layout: Home
 
 # Will Willems' Blog
 
-Designer, developer and web development consultant. I’m currently obsessed with improving static generated Vue.js apps.
+Passionate developer and web development consultant. I’m currently obsessed with creating blazing fast modern web apps.
 
 ::: slot about
 Who am I? 
