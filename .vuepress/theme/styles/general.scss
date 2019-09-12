@@ -8,9 +8,9 @@ html {
   color: $txt-color-light;
   font-size: 18px;
 
-  // @media (max-width: $sm-break-point) {
-  //   font-size: 18px;
-  // }
+  @media (max-width: $sm-break-point) {
+    font-size: 14px;
+  }
 }
 
 *, *:before, *:after {
