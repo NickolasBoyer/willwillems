@@ -181,6 +181,12 @@ export default {
   & /deep/ h2 {
     margin-top: 1.7em;
   }
+
+  & /deep/ img {
+    width: 100%;
+    max-height: 720px;
+    object-fit: contain;
+  }
 }
 
 .article-footer {
