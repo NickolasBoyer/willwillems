@@ -2,8 +2,8 @@
 duration: 7 min
 author: Will Willems
 category: Hardware
-img: 'http://localhost:8080/assets/img/frontpanel-design.5b6b2854.png'
-image: 'http://localhost:8080/assets/img/frontpanel-design.5b6b2854.png'
+img: 'https://i.imgur.com/S8VBkrj.png'
+image: 'https://i.imgur.com/S8VBkrj.png'
 date: 07/20/2015
 lang: en-US
 
