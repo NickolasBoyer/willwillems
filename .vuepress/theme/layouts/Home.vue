@@ -8,7 +8,7 @@
             div Will
             div Willems
           Content.welcome-text__body
-        img.personal-image( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover.png'" )
+        img.personal-image( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover-dark.png'" )
       section.section.article-sections( id="#articles" )
         h1.section__header Articles
         .section__body
