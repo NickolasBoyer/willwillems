@@ -307,7 +307,7 @@ export default {
 
   a {
     font-weight: bold;
-    margin: 0 1em;
+    margin: 0 2em;
     opacity: .6;
     border: none;
     transition: opacity 0.2s linear;
