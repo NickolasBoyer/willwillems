@@ -31,22 +31,20 @@
         h1.section__header About
         Content( slot-key="about" ).section__body
       section.section.contact-section( id="#contact" )
-        h1.section__header Contact
-        .section__body.section__body--horizontal-flow
-          div
-            p
-              a.contact-link( href="mailto:me@willwillems.com" )
-                span Email me 
-                div.contact-link__icon →
-            p
-              a.contact-link( href="https://twitter.com/will_rut" )
-                span DM me on Twitter 
-                div.contact-link__icon →
+        h1.section__header.contact-section__header Contact
+        ul.contact-section__icons
+          li
+            span.contact-section__icon.contact-section__icon--arrow
+              img( src="../../assets/arrow.svg" )
+          li
+            a( href="mailto:me@willwillems.com" title="Email me" ).contact-section__icon.contact-section__icon--link
+              img( src="../../assets/email.svg" )
+          li
+            a( href="https://twitter.com/will_rut" title="DM me on Twitter" ).contact-section__icon.contact-section__icon--link
+              img( src="../../assets/twitter.svg" )
       footer.page-footer
         a( href="mailto:me@willwillems.com" ) Contact
-        span •
         a( href="/rss.xml" ) RSS
-        span •
         a( href="https://twitter.com/rut_will" ) Twitter
 </template>
 
@@ -251,20 +249,53 @@ export default {
   margin: 10px
 }
 
-.contact-link {
-  &__icon {
-    display: inline-block;
+.contact-section {
+  &__header {
+    margin-bottom: -.2em;
   }
-  &:hover {
-    .contact-link__icon {
-      animation: jiggle 1s ease-in-out infinite;
+  &__icons {
+    margin: 0;
+    padding-left: 56px;
+    list-style: none;
+
+    li {
+      display: inline-block;
     }
   }
 
-  @keyframes jiggle {
-    0% { transform: translateX(0px); }
-    50% { transform: translateX(5px); }
-    100% { transform: translateX(0px); }
+  &__icon {
+    display: inline-block;
+    margin: 0 8px;
+    height: 56px;
+    width: 56px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      transition: transform .3s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &--arrow {
+      margin: 0;
+      img {
+        margin-bottom: 6px;
+      }
+    }
+
+    &--link {
+      text-decoration: none;
+      border: solid 3px $accent-color;
+      border-radius: 50%;
+
+      img {
+        padding: 12px;
+      }
+    }
   }
 }
 
@@ -276,8 +307,9 @@ export default {
 
   a {
     font-weight: bold;
-    margin: 0 .4em;
+    margin: 0 1em;
     opacity: .6;
+    border: none;
     transition: opacity 0.2s linear;
 
     &:hover {
