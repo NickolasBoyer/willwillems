@@ -6,7 +6,7 @@ icon: '/img/icon/devsync.svg'
 iconDark: '/img/icon/devsync-dark.svg'
 lang: en-US
 
-projectUrl: https://devsync.com
+projectUrl: https://devsync.co
 
 ---
 
