@@ -35,13 +35,13 @@
         ul.contact-section__icons
           li
             span.contact-section__icon.contact-section__icon--arrow
-              img( src="../../assets/arrow.svg" )
+              IconArrow
           li
             a( href="mailto:me@willwillems.com" title="Email me" ).contact-section__icon.contact-section__icon--link
-              img( src="../../assets/email.svg" )
+              IconEmail
           li
             a( href="https://twitter.com/will_rut" title="DM me on Twitter" ).contact-section__icon.contact-section__icon--link
-              img( src="../../assets/twitter.svg" )
+              IconTwitter
       footer.page-footer
         a( href="mailto:me@willwillems.com" ) Contact
         a( href="/rss.xml" ) RSS
@@ -51,6 +51,10 @@
 <script>
 import groupBy from 'lodash/groupBy'
 
+import IconArrow from '../components/icons/IconArrow.vue'
+import IconEmail from '../components/icons/IconEmail.vue'
+import IconTwitter from '../components/icons/IconTwitter.vue'
+
 import ArticlePreviewCard from '../components/ArticlePreviewCard.vue'
 export default {
   name: 'Home',
@@ -58,6 +62,9 @@ export default {
     msg: String
   },
   components: {
+    IconArrow,
+    IconEmail,
+    IconTwitter,
     ArticlePreviewCard
   },
   data () {
@@ -126,7 +133,7 @@ export default {
 .personal-image {
   width: 500px;
   max-width: 100%;
-  object-fit: contain
+  object-fit: contain;
 }
 
 .welcome-section {
@@ -282,17 +289,21 @@ export default {
 
     &--arrow {
       margin: 0;
-      img {
+      img, svg {
         margin-bottom: 6px;
       }
     }
 
     &--link {
       text-decoration: none;
-      border: solid 3px $accent-color;
+      border: solid 3px white;
+      @include accent-for('border-color');
       border-radius: 50%;
 
-      img {
+      img, svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
         padding: 12px;
       }
     }
