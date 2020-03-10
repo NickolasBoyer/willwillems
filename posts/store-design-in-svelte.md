@@ -12,7 +12,15 @@ lang: en-US
 
 THIS IS A PUBLIC DRAFT
 
-Usually when working with larger Vue.js applications I try to stick to [Gitlab's Vuex Frontend Development Guideline](https://docs.gitlab.com/ee/development/fe_guide/vuex.html) when it comes to working with Vuex, Vue.js' store.
+When your JS project gets big you often end up needing a data store. With larger apps or SPA's this can get to complex really easy. When working with Vue I try to stick to [Gitlab's Vuex Frontend Development Guideline](https://docs.gitlab.com/ee/development/fe_guide/vuex.html). A guide that aims to provide structure and order when working with Vuex, Vue.js' store.
+
+For more technical web projects development I've recently become very fond of Svelte. It allows for much more versatility, flexibility and makes my technical project more maintainable and reduces development time.
+
+However working with Svelte's stores can become chaotic if you yourself don't apply any structure. In order to fix this I decided to port Gitlab's Vuex example to Svelte's stores.
+
+Here is the result:
+
+<iframe title="Gitlab's Vuex guide for Svelte" src="https://svelte.dev/repl/939579262de34b00b97873f2e61cd3b0?version=3.19.2" scrolling="no"></iframe>
 
 ## Summary of Gitlab's philosophy
 They:
