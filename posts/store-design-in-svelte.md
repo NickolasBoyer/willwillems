@@ -20,7 +20,7 @@ However working with Svelte's stores can become chaotic if you yourself don't ap
 
 Here is the result:
 
-<iframe title="Gitlab's Vuex guide for Svelte" src="https://svelte.dev/repl/939579262de34b00b97873f2e61cd3b0?version=3.19.2" scrolling="no"></iframe>
+<iframe title="Gitlab's Vuex guide for Svelte" src="https://svelte.dev/repl/939579262de34b00b97873f2e61cd3b0?version=3.19.2" width="100%" height="600px" scrolling="no"></iframe>
 
 ## Summary of Gitlab's philosophy
 They:
