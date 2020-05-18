@@ -1,6 +1,5 @@
 ## redirect to twitter account
 [[redirects]]
   from = "/twitter"
-  to = "https://twitter.com/will_rut"
-  status = 307
-  force = true
+  to = "will_rut"
+  force = true # COMMENT: ensure that we always redirect
