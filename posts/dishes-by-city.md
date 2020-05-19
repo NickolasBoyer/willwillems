@@ -22,7 +22,7 @@ I'm not claiming these dishes are the best ones you'll find in the city, though 
 - Chiang Mai, Nimman - Cappuccino & Bostock @ [Flour Flour Slice](http://flourflour.cafe/)
 - Bangkok, Sukhumvit - Cappuccino & Smashed Avo @ [ROAST](https://roastbkk.com)
 
-**🇬🇧 London**
+**🏴󠁧󠁢󠁥󠁮󠁧󠁿 England**
 - London - Daily menu @ [The Corner Room](https://www.townhallhotel.com/food-and-drink/corner_room)
 
 **🇮🇹 Italy**
@@ -30,3 +30,9 @@ I'm not claiming these dishes are the best ones you'll find in the city, though 
 
 **🇵🇱 Poland**
 - Kraków, Kazimierz - Vegan Omakase @ [Youmiko Sushi](https://www.facebook.com/YoumikoSushi)
+
+**🇵🇹 Portugal**
+- Lisbon, Bairro Alto - Cardamom Bun @ [Copenhagen Coffee Lab](https://copenhagencoffeelab.com/)
+
+**🇧🇬 Bulgaria**
+- Sofia, Serdika - Banitsa @ [Rainbow Factory](https://www.facebook.com/fabrikadaga)
