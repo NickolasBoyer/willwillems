@@ -9,7 +9,7 @@
             div Willems
           Content.welcome-text__body
         .personal-image
-          img.personal-image__img( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover-dark.png'" )
+          img.personal-image__img( :src="$site.themeConfig.homeImgSrc" )
           .personal-image__b.personal-image__b--1
           .personal-image__b.personal-image__b--2
           .personal-image__b.personal-image__b--3
@@ -28,7 +28,7 @@
           a.project-card-container(
             v-for="project in previewProjects" 
             :href="project.frontmatter.projectUrl" 
-            :style="`background-image: url('${darkMode ? (project.frontmatter.iconDark || project.frontmatter.icon) : project.frontmatter.icon}');`"
+            :style="`background-image: url('${project.frontmatter.icon}');`"
           )
             .project-card
       section.section.about-section( id="#about" )
@@ -70,14 +70,6 @@ export default {
     IconEmail,
     IconTwitter,
     ArticlePreviewCard
-  },
-  data () {
-    return {
-      darkMode: true,
-    }
-  },
-  mounted () {
-    // this.darkMode = !!window.matchMedia('(prefers-color-scheme: dark)').matches
   },
   computed: {
     blogPosts () {
@@ -136,7 +128,7 @@ export default {
 
 .personal-image {
   position: relative;
-  width: 460px;
+  width: 440px;
   margin: 1rem;
   max-width: 100%;
   overflow: visible;
