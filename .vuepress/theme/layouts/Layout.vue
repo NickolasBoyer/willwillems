@@ -82,7 +82,7 @@ export default {
   opacity: 0.7;
   font-weight: bold;
   font-size: 0.8rem;
-  background-color: $bg-color-light;
+  background-color: $bg-color;
   padding: 3px 6px;
   border-radius: 3px;
 
@@ -206,7 +206,7 @@ export default {
     width: $headshot-size;
     height: $headshot-size;
     border-radius: 50%;
-    border: solid $bg-color-light 10px;
+    border: solid $bg-color 10px;
     background-color: white;
     object-fit: cover;
   }
