@@ -8,7 +8,11 @@
             div Will
             div Willems
           Content.welcome-text__body
-        img.personal-image( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover-dark.png'" )
+        .personal-image
+          img.personal-image__img( :src="$site.themeConfig.homeImgSrc" onerror="this.onerror=null; this.src='/img/cover-dark.png'" )
+          .personal-image__b.personal-image__b--1
+          .personal-image__b.personal-image__b--2
+          .personal-image__b.personal-image__b--3
       section.section.article-sections( id="#articles" )
         h1.section__header Articles
         .section__body
@@ -94,7 +98,7 @@ export default {
 @import "../styles/vars.scss";
 @import "../styles/mixins.scss";
 
-.mobile-padding { padding: 0 10px; }
+.mobile-padding { padding: 0 10px; overflow-x: hidden; }
 
 .home {
   padding: 0; // section blocks take care of padding
@@ -131,9 +135,72 @@ export default {
 }
 
 .personal-image {
-  width: 500px;
+  position: relative;
+  width: 460px;
+  margin: 1rem;
   max-width: 100%;
-  object-fit: contain;
+  overflow: visible;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: transform .3s ease-in-out;
+  }
+
+  &__b {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transition: transform .3s ease-in-out;
+
+    &--1 {
+      background-color: #EE8B1F;
+      top: 65%;
+      left: 80%;
+      height: 30%;
+      width: 30%;
+    }
+
+    &--2 {
+      background-color: #D93232;
+      top: 85%;
+      left: 10%;
+      height: 20%;
+      width: 20%;
+    }
+
+    &--3 {
+      background-color: #F8B420;
+      top: 5%;
+      left: 85%;
+      height: 10%;
+      width: 10%;
+    }
+  }
+
+  &:hover {
+    .personal-image__img {
+      transform: scale(1.05);
+      filter: saturate(1.1);
+    }
+
+    .personal-image__b {
+      transform: scale(.90);
+
+      &--1 {
+        transform: translate(20%, 30%);
+      }
+
+      &--2 {
+        transform: translate(-30%, 20%);
+      }
+
+      &--3 {
+        transform: translate(30%, -40%);
+      }
+    }
+  }
 }
 
 .welcome-section {
