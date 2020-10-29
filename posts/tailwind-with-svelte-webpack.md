@@ -53,3 +53,7 @@ module.exports = {
 ## Optional: include global CSS trough JS
 
 You might have been importing global CSS without processing it, you can fix this by moving the importing of this file to your JS entry file and putting the import at the top there like:
+
+## Enabling Intellisense
+
+Add `{ "svelte": "html" }` to the `includeLanguages` setting of the Tailwind Intellisense plugin to get autocompletion.
