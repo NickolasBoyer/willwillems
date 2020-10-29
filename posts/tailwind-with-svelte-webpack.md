@@ -48,13 +48,8 @@ module.exports = {
 ```
 *In this example we're also importing `precss` and `*autoprefixer*`. These plugins are real no-brainers and you should probably use them unless you have a specific reason not to.*
 
+**Make sure you've set the `emitCss` option of `svelte-loader` to `true`.**
+
 ## Optional: include global CSS trough JS
 
 You might have been importing global CSS without processing it, you can fix this by moving the importing of this file to your JS entry file and putting the import at the top there like:
-
-```js
-//main.js
-import '../public/global.css'
-import App from './App.svelte';
-```
-*Webpack will automatically bundle this with your CSS based on the filetype.*
