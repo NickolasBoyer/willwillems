@@ -206,7 +206,7 @@ export default {
     width: $headshot-size;
     height: $headshot-size;
     border-radius: 50%;
-    border: solid $bg-color 10px;
+    border: solid white 10px;
     background-color: white;
     object-fit: cover;
   }
