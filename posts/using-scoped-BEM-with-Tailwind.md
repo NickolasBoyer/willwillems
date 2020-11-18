@@ -2,8 +2,8 @@
 duration: 8 min
 author: Will Willems
 category: Development
-img: ''
-image: ''
+img: 'https://i.imgur.com/V8KMjHP.png'
+image: 'https://i.imgur.com/V8KMjHP.png'
 date: 11/18/2020
 lang: en-US
 
