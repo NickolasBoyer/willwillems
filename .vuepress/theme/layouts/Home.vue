@@ -27,7 +27,7 @@
         .section__body.section__body--horizontal-flow
           a.project-card-container(
             v-for="project in previewProjects" 
-            :href="project.frontmatter.projectUrl" 
+            :href="project.path" 
             :style="`background-image: url('${project.frontmatter.icon}');`"
           )
             .project-card

@@ -1,15 +1,15 @@
 ---
-duration: 12 min
+layout: Project
 author: Will Willems
-date: 02/10/2019
+lang: en-US
+year: 2018
+tags: Design, Sketch, JS
 icon: '/img/icon/sadp-dark.svg'
 iconDark: '/img/icon/sadp-dark.svg'
-lang: en-US
-
 projectUrl: https://sketchairtabledataplugin.com/
 
 ---
 
-# Sketch Airtabledata Plugin
+# SAP
 
-Description of the project
+ A simple way to get your Airtable data into your sketch symbols. 

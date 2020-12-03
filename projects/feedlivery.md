@@ -1,15 +1,15 @@
 ---
-duration: 12 min
+layout: Project
 author: Will Willems
-date: 02/10/2019
+lang: en-US
+year: 2020
+tags: Vue.js, Browser Extension, Devtools
 icon: '/img/icon/rssdigest-dark.svg'
 iconDark: '/img/icon/rssdigest-dark.svg'
-lang: en-US
-
 projectUrl: https://feedlivery.com
 
 ---
 
 # Feedlivery
 
-Description of the project
+Just a weekly/monthly email with the posts from blogs you love, if there are no new ones we won't email you. The whole idea is to bother you as little as possible and keep it stupid simple.

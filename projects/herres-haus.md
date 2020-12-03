@@ -1,15 +1,15 @@
 ---
-duration: 1 min
+layout: Project
 author: Will Willems
-date: 18/02/2020
+lang: en-US
+year: 2020
+tags: Art, Svelte
 icon: '/img/icon/herreshaus-dark.svg'
 iconDark: '/img/icon/herreshaus-dark.svg'
-lang: en-US
-
 projectUrl: https://herres.haus
 
 ---
 
 # Herres Haus
 
-Description of the project
+Underground indie DJ collective.
