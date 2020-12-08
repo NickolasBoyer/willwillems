@@ -87,6 +87,10 @@ Using tailwind and extending our previous example a bit gives us this:
 
   &__icon{
     @apply h-8 w-8 object-fit;
+    background-image: url('/icon/caret.svg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 
