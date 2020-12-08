@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: projects
+  label: projects
+  create: documents
+  match: "**/*"
 - type: document
   path: README.md
   label: Homepage
@@ -18,4 +23,8 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  output_directory: dist
+  preview_output_directory: ".vuepress/dist"
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  instant_preview_command: npm run develop
