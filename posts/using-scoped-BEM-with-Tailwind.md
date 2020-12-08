@@ -8,9 +8,9 @@ date: 11/18/2020
 lang: en-US
 
 ---
-# Scoped BEM with Tailwind for wonderful CSS
+# Tailwind for actual front-end developers
 
-Using scoped CSS, BEM naming and Tailwind as a framework you can write some of the most maintainable and readable CSS whilst decreasing development time too.
+Let's be honest. Exclusively using a framework with predefined CSS atoms will never be a proper solution for anyone designing a custom front-end. Thoroughly customising Tailwind already gets you pretty far but you'll never be able to reasonably bridge [the Bailwind gap](https://twitter.com/ryanflorence/status/1251589516617379840) with it. However. Using scoped CSS and BEM naming with Tailwind you can write some of the most maintainable and readable CSS while still decreasing development time and improving readability.
 
 ## Scoping
 
