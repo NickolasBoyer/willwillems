@@ -10,44 +10,43 @@ lang: en-US
 ---
 # Store patterns in Svelte: Gitlab's Vuex
 
-THIS IS A PUBLIC DRAFT
+When your JS project gets big you often end up needing a data store. With larger apps or SPA's this can get complex really quick. When working with Vue I usually use [Gitlab's Vuex Frontend Development Guidelines](https://docs.gitlab.com/ee/development/fe_guide/vuex.html). A guide that aims to provide structure and order when working with Vuex, Vue.js' store.
 
-When your JS project gets big you often end up needing a data store. With larger apps or SPA's this can get to complex really easy. When working with Vue I try to stick to [Gitlab's Vuex Frontend Development Guideline](https://docs.gitlab.com/ee/development/fe_guide/vuex.html). A guide that aims to provide structure and order when working with Vuex, Vue.js' store.
+![They're more like guidelines than actual rules](https://memegenerator.net/img/instances/54193135/more-like-guidelines-than-actual-rules.jpg)
 
-For more technical web projects development I've recently become very fond of Svelte. It allows for much more versatility, flexibility and makes my technical project more maintainable and reduces development time.
+For more technical web projects/apps I've switched to Svelte. It allows for more versatility, flexibility, makes my technical project more maintainable and reduces development time.
 
-However working with Svelte's stores can become chaotic if you yourself don't apply any structure. In order to fix this I decided to port Gitlab's Vuex example to Svelte's stores.
+Another great thing about Svelte are it's stores but they can quickly become chaotic if you don't apply any structure. In order to provide some guidelines I decided to port Gitlab's Vuex examples to Svelte's stores.
 
 Here is the result:
 
 <iframe title="Gitlab's Vuex guide for Svelte" src="https://svelte.dev/repl/939579262de34b00b97873f2e61cd3b0?version=3.19.2" width="100%" height="600px" scrolling="no"></iframe>
 
-## Summary of Gitlab's philosophy
-They:
+## Gitlab's philosophy
 
-Steer you towards proper application design:
+One of the main goals of their style is to steer you towards proper application design:
 
 > The first thing you should do before writing any code is to design the state.
 
-Work with a *useful* separation of concerns:
+Another main aspect of their method is to work with a *useful* separation of concerns:
 
 > When a user clicks on an action, we need to dispatch it. This action will commit a mutation that will change the state.
 
-With a no-BS real world-based approach:
+Grounded in a no-BS real world-based approach:
 
 > Remember that actions only describe that something happened, they don’t describe how the application state changes.
 
-Have super solid [Action naming](https://docs.gitlab.com/ee/development/fe_guide/vuex.html#actions-pattern-request-and-receive-namespaces) guidelines:
+With very **concrete** advice, for example their super solid [Action naming](https://docs.gitlab.com/ee/development/fe_guide/vuex.html#actions-pattern-request-and-receive-namespaces) guidelines:
 
 > 1. An action requestSomething, to toggle the loading state
 > 2. An action receiveSomethingSuccess, to handle the success callback
 > 3. An action receiveSomethingError, to handle the error callback
 > 4. An action fetchSomething to make the request.
 
-I highly recommend you read the [Gitlab guide itself](https://docs.gitlab.com/ee/development/fe_guide/vuex.html) if you have ever used Vue but it's not needed to read this article (although it does make it easier).
+I f you have ever used Vue I highly recommend you read [Gitlab guide itself](https://docs.gitlab.com/ee/development/fe_guide/vuex.html) for some context.
 
-## The Vuex actions
-Since Gitlab uses *only* actions to interface with the store (very sensible) you'll find all the "exposed" functions here.
+## The Store actions
+Since Gitlab *exclusively* uses actions to interface with the store (very sensible) you'll find all the "exposed" functions here.
 
 > Never commit a mutation directly from a component
 
@@ -86,11 +85,9 @@ You can find the entire code here but we'll cut some stuff out to make it a bit 
   }
 ```
 
-Gitlab first defines their state mutations in basic actions and then compose these together in bigger and more useful "service" actions that are actually used in the application.
+Most of Gitlab's state mutations have a basic/simple corresponding action which is used to trigger the mutation. Subsequently they use these to create bigger and more useful "service" actions that they use in the application.
 
-To make this example a bit more readable I'm going to simplify this a bit but in practice you should do this to. We'll end up with a Svelte store that also uses this pattern, but a bit more strict.
-
-Secondly I'll temporarily remove the `addUser` function. It doesn't do anything much different from `fetchUsers` and reduces the LOC you have to scan through by 50%.
+At some point I'll make the code a bit more succinct than I would normally do to improve readability. Furthermore I'll temporarily remove the `addUser` function. It doesn't significantly differ from `fetchUsers` and reduces the LOC you have to scan through by 50%.
 
 ```js
   import * as types from './mutation_types';
@@ -115,7 +112,7 @@ I've you've ever worked with finite state machines this might kinda remind you o
 3. The API request is made.
 4. On succes or error respectively `RECEIVE_USERS_SUCCESS` and `RECEIVE_USERS_ERROR` are committed passing along the relevant data.
 
-Let's see what these commits do, I've excluded the other commits here:
+Let's see what these commits do. I've excluded the other commits:
 
 ```js
  export default {
@@ -133,9 +130,9 @@ Let's see what these commits do, I've excluded the other commits here:
  };
 
 ```
-With the first commit the loading state is activated, this one is used before making the actual request.
+In the first commit the loading state is activated, this is done before making the actual request.
 
-Then using the second or third request the loading state is deactivated and the data is processed or the error handled depending on whether the request was successfully.
+Using the second or third request the loading state is deactivated and the data is processed or the error handled depending on whether the request was successfully.
 
 Pretty straightforward right? Finally, the state. Since it's quite small I'm including it in it's entirety here:
 
@@ -155,11 +152,11 @@ export default () => ({
 
 ```
 
-## Porting the Vuex example to Svelte
+## Porting the Vue example to Svelte
 
-Ok that was a lot of Vuex code, let's move on to Svelte.
+Ok that was a lot of Vuex code, let's move it to Svelte.
 
-Fortunately it's best to explain these stores from high to low level but to design them the other way around. So we'll do the state first:
+It's easiest to explain these stores from high-level to low-level and to design them the other way around. So we'll do the state first:
 
 ``` js
 import { writable } from 'svelte'
@@ -208,7 +205,7 @@ export const receiveUsersError = (error) => {
 ```
 I'm a big fan of keeping these two in the same file since it encourages me to keep the store "modules" small and simple but separate them if you want.
 
-We will be importing the store variables to use in our components but not the functions that mutate the store data, we'll use these *only* in our "actions" though I like to call them services and separate them in `store` (state & state mutations) and `service` (actions) folders.
+We will be importing the store variables to use in our components but not the functions that mutate the store data, we'll use these *only* in our "actions". I like to call them services and separate them in `store` (state & state mutations) and `service` (actions) folders.
 
 ```js
 import { endpoint, requestUsers, receiveUsersSuccess, receiveUsersError } from './store'
@@ -226,7 +223,7 @@ export const fetchUsers = () => {
   }
 ```
 
-The `requestUsers` name looks a bit weird like this, I would slightly rename this to be more clear but apart from this we're done! You can check out the entire working example [here](https://svelte.dev/repl/939579262de34b00b97873f2e61cd3b0?version=3.19.2) which includes a basic UI to interact with the store and service.
+The `requestUsers` name looks a bit weird like this, I personally would rename this to be clearer but apart from this we're done! You can check out the working example [here](https://svelte.dev/repl/939579262de34b00b97873f2e61cd3b0?version=3.19.2) which includes a basic UI to interact with the store and service.
 
 ## Final thoughts
 
