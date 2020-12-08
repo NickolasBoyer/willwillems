@@ -12,8 +12,6 @@ lang: en-US
 
 When your JS project gets big you often end up needing a data store. With larger apps or SPA's this can get complex really quick. When working with Vue I usually use [Gitlab's Vuex Frontend Development Guidelines](https://docs.gitlab.com/ee/development/fe_guide/vuex.html). A guide that aims to provide structure and order when working with Vuex, Vue.js' store.
 
-![They're more like guidelines than actual rules](https://memegenerator.net/img/instances/54193135/more-like-guidelines-than-actual-rules.jpg)
-
 For more technical web projects/apps I've switched to Svelte. It allows for more versatility, flexibility, makes my technical project more maintainable and reduces development time.
 
 Another great thing about Svelte are it's stores but they can quickly become chaotic if you don't apply any structure. In order to provide some guidelines I decided to port Gitlab's Vuex examples to Svelte's stores.
