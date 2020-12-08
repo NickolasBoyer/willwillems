@@ -77,7 +77,7 @@ You might not be familiar with the ampersand syntax used here. The `&` simply ge
 
 The cherry on top. Although less popular, you can use Tailwind with the `@apply` directive to compose classes instead of writing CSS in HTML which, in my opinion, is a terrible idea, sorry Adam and Steve 😉.
 
-So why use it? Consistent and customizable color use, easy proper sizing, typography defaults, etc. All definitely good reasons to use Tailwind but for me the number one benefit is speed of development & readability.
+So why use it? Consistent and customisable color use, easy proper sizing, typography defaults, etc. All definitely good reasons to use Tailwind but for me the number one benefit is speed of development & readability.
 
 Using tailwind and extending our previous example a bit gives us this:
 
@@ -107,7 +107,7 @@ Using tailwind and extending our previous example a bit gives us this:
 }
 ```
 
-Remebering all CSS properties and their values without autocomplete took me years to do, Tailwind weeks.
+Remembering all CSS properties and their values without autocomplete took me years to do, Tailwind weeks.
 
 One additional benefit is being able to add custom CSS when you feel like it. I for example like to write out CSS background rules because that's more clear to me and they often need quite specific values.
 
