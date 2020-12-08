@@ -42,7 +42,7 @@ BEM stands for Block Element Modifier and is noted as: `block__element--modifier
 
 As you can see `__` is used as the block-element divider and `--` as the element-modifier divider. As usual '-' is used to write names in `kebab-case`.
 
-![BEM naming example](http://getbem.com/assets/github_captions.jpg)
+![BEM naming example](https://i.imgur.com/ph5CajQ.jpg)
 
 On GetBEM they mark menu items as elements and the menu as a block, where one draws the line between block and element really is up to you but I would definitely define the menu items as a block resulting in the following CSS:
 
@@ -109,7 +109,7 @@ Using tailwind and extending our previous example a bit gives us this:
 
 Remebering all CSS properties and their values without autocomplete took me years to do, Tailwind weeks.
 
-One additional benefit is being able to add custom CSS if you feel like it. I for example like to write out CSS background rules because that's more clear to me and they often need quite specific values.
+One additional benefit is being able to add custom CSS when you feel like it. I for example like to write out CSS background rules because that's more clear to me and they often need quite specific values.
 
 Additionally if you need to use some CSS to do a unusual thing, tailwind won't help you so you'll need to write it manually. The beauty of this workflow is that hyper-specific or unusual CSS will stand out by default!
 
