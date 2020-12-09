@@ -37,6 +37,7 @@ export default {
   max-width: 820px;
   margin: 0 auto;
   padding: 1rem;
+  margin-bottom: 4rem;
 }
 
 .header {
@@ -116,6 +117,10 @@ export default {
 
   div /deep/ h1:first-child {
     display: none;
+  }
+
+  div /deep/ img {
+    width: 100%;
   }
 }
 
