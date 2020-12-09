@@ -12,4 +12,4 @@ projectUrl: https://feedlivery.com
 
 # Feedlivery
 
-Just a weekly/monthly email with the posts from blogs you love, if there are no new ones we won't email you. The whole idea is to bother you as little as possible and keep it stupid simple.
+Feedlivery is a simple RSS subscription service that emails you your feed updates every day/week/month. Feedlivery was created in a weekend and currently has got a couple hundred subscribers.
