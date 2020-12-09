@@ -12,4 +12,4 @@ projectUrl: https://herres.haus
 
 # Herres Haus
 
-Underground indie DJ collective.
+An underground indie DJ collective focussed on featuring smaller but extremely talented artists.

@@ -12,6 +12,8 @@ projectUrl: https://whoishiring.me
 
 # Whoishiring.me
 
-Whoishiring.me is a simple subscribable search machine for the monthly “Who is hiring?” posted on Hacker News.
+Whoishiring.me is one of the first web dev side projects I ever built. It's a simple subscribable search machine for the monthly “Who is hiring?” posted on Hacker News. 
 
-Whoishiring.me is currently hosted on Firebase hosting while the backend is managed by Google App Engine, there is still a lot to improve though. Currently we are using Sparkpost which we migrated to after using a custom system for a while. So far the hosting of this app has cost $0.00 in total.
+The project briefly reached #1 on [Hacker News](https://news.ycombinator.com/item?id=16743030) when it launched instantly collecting around 1,000 subscribers in its first day.
+
+Whoishiring.me is currently hosted on Netlify where it auto-rebuilds every month.

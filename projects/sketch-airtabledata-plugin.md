@@ -10,6 +10,6 @@ projectUrl: https://sketchairtabledataplugin.com/
 
 ---
 
-# SAP
+# SADP
 
- A simple way to get your Airtable data into your sketch symbols. 
+Sketch Airtable Data Plugin enables designers to programatically auto-import data from Airtable into Sketch. This way clients can edit the demo data used in the designs to get a better feel for what the end product will look like.
