@@ -42,7 +42,7 @@ export default {
 }
 
 .mailing-list-box {
-  background-color: black;
+  background-color: #0e0b07;
   padding: .5em 3em;
   margin: 3em 1em;
   border-radius: 5px;
@@ -101,7 +101,6 @@ export default {
   margin: 20px;
   color: rgba(255, 255, 255, 1.0);
   background-color: transparent;
-  border: none;
   background-image: url("../assets/button.svg");
   background-size: contain;
   background-position: center center;

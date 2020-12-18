@@ -249,9 +249,14 @@ export default {
 
 
 .article-link {
+  @include accent-for('border-bottom-color');
+  text-decoration: none;
   color: inherit;
   margin: .3em 0;
   line-height: 2em;
+  padding-bottom: 1px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
 
   &__title {
 
@@ -283,7 +288,6 @@ export default {
   min-width: unset;
 
   background-color: rgba(128, 128, 128, 0.2);
-  border: none;
   border-radius: 20px;
   margin: 10px;
   background-size: 50%;
@@ -313,6 +317,15 @@ export default {
 .about-text-block {
   display: inline-block;
   margin: 10px
+
+  a {
+    @include accent-for('border-bottom-color');
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
 }
 
 .contact-section {
@@ -379,8 +392,8 @@ export default {
     font-weight: bold;
     margin: 0 2em;
     opacity: .6;
-    border: none;
     transition: opacity 0.2s linear;
+    text-decoration: none;
 
     &:hover {
       opacity: 1;

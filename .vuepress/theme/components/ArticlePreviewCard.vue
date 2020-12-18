@@ -45,7 +45,6 @@ $img-height: 180px;
 
   // counter <a> style
   text-decoration: none;
-  border-bottom: none;
 
   &__thumb {
     width: $card-width;

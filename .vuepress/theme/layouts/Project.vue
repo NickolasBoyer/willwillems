@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/vars.scss";
+@import "../styles/mixins.scss";
 
 .project-page {
   max-width: 820px;
@@ -53,8 +54,6 @@ export default {
   @media (max-width: $sm-break-point) {
     --size: 12rem;
   }
-
-  border-bottom: none;
 
   &__img {
     height: var(--size);
@@ -113,7 +112,7 @@ export default {
 
 .project-description {
   font-weight: 600;
-  line-height: 1.6em;
+  line-height: 1.8em;
 
   div /deep/ h1:first-child {
     display: none;
@@ -122,10 +121,18 @@ export default {
   div /deep/ img {
     width: 100%;
   }
+
+  div /deep/ a {
+    @include accent-for('border-bottom-color');
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
 }
 
 .link-back {
   font-weight: 800;
-  border-bottom: none;
 }
 </style>
