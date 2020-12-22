@@ -1,7 +1,7 @@
 ---
 duration: 1 min
 author: Will Willems
-category: 99/1
+category: Other
 date: 09/11/2018
 img: 'https://source.unsplash.com/4_jhDO54BYg/'
 image: 'https://source.unsplash.com/4_jhDO54BYg/'
