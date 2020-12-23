@@ -8,7 +8,7 @@ lang: en-US
 
 ---
 
-# Great collapsing borders in CSS with box-shadow
+# Collapsing borders in CSS with box-shadow
 
 Thank god nobody uses tables for layout anymore but we can't collapse borders using regular CSS elements, unless...
 
