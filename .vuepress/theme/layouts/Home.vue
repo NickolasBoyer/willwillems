@@ -13,7 +13,7 @@
           .personal-image__b.personal-image__b--1
           .personal-image__b.personal-image__b--2
           .personal-image__b.personal-image__b--3
-      section.section.article-sections( id="#articles" )
+      section.section.article-section( id="#articles" )
         h1.section__header Articles
         template( v-for="year in blogPosts" )
           h2.section__sub-header {{year.year}}
@@ -118,7 +118,7 @@ export default {
   }
 
   &__sub-header {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: #d93232;
     margin: none;
 
@@ -265,6 +265,10 @@ export default {
     list-style: square;
     margin: 10px 0;
   }
+}
+
+.article-section .section__sub-header:first-of-type {
+  visibility: hidden;
 }
 
 
