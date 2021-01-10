@@ -14,6 +14,14 @@ module.exports = {
     footerAuthorName: 'Will Willems',
     footerAuthorDescription: 'Web developer @ Nickolas Boyer and dabbling in digital products. Blogs about software development and more.'
   },
+  additionalPages: [
+    {
+       path: '/posts/',
+       frontmatter: {
+          layout: 'Posts'
+       }
+    }
+  ],
   plugins: {
     'feed': {
       canonical_base: 'https://willwillems.com',

@@ -15,15 +15,15 @@
           .personal-image__b.personal-image__b--3
       section.section.article-section( id="#articles" )
         h1.section__header Articles
-        template( v-for="year in blogPosts" )
-          h2.section__sub-header {{year.year}}
-          .section__body
-            .link-list( v-for="(list, key) in year.posts" )
-              h3.link-list__title {{key}}
-              ul.link-list__list
-                li( v-for="page in list" )
-                  a.article-link( :href="page.path" )
-                    span.article-link__title {{page.title}}
+          h2.section__sub-header.section__sub-header--flat {{ mostRecentContentYear }}
+        .section__body
+          .link-list( v-for="(list, key) in blogPosts" )
+            h3.link-list__title {{key}}
+            ul.link-list__list
+              li( v-for="page in list" )
+                a.article-link( :href="page.path" )
+                  span.article-link__title {{page.title}}
+        a( href="/posts" style="display: block; margin: 1.5rem 0; font-weight: 900;" ) See All →
       section.section.projects-section( id="#projects" )
         h1.section__header Projects
         .section__body.section__body--horizontal-flow
@@ -56,10 +56,6 @@
 
 <script>
 import groupBy   from 'lodash/fp/groupBy'
-import map       from 'lodash/map'
-import mapValues from 'lodash/fp/mapValues'
-import pipe      from 'lodash/fp/pipe'
-import reverse      from 'lodash/fp/reverse'
 
 import IconArrow from '../components/icons/IconArrow.vue'
 import IconEmail from '../components/icons/IconEmail.vue'
@@ -78,15 +74,19 @@ export default {
     ArticlePreviewCard
   },
   computed: {
+    posts () {
+      // all posts 
+      return this.$site.pages.filter(post => post.path.startsWith('/posts/') && (post.path !== '/posts/'))
+    },
+    mostRecentContentYear () {
+      return  Math.max(...this.posts.map(post => Number(post.frontmatter.date?.slice(6))))
+    },
     blogPosts () {
-      const posts = this.$site.pages.filter(post => post.path.startsWith('/posts/'))
+      const groupPostByCategory = groupBy(post => post.frontmatter?.category)
 
-      return pipe(
-        groupBy(page => page.frontmatter.date.slice(6)),
-        mapValues(groupBy(page => page.frontmatter.category)),
-        (e) => map(e, (val, key) => ({ year: key, posts: val})), // the fp version doesnt do objects
-        reverse
-      )(posts)
+      return groupPostByCategory(this.posts
+        .filter(post => Number(post.frontmatter.date?.slice(6)) === this.mostRecentContentYear)
+      )
     },
     previewProjects () {
       return this.$site.pages
@@ -118,12 +118,13 @@ export default {
   }
 
   &__sub-header {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     color: #d93232;
     margin: none;
 
-    &:first-of-type {
-      margin-top: -1.5rem;
+    &--flat {
+      display: inline;
+      margin: 0 0.3rem;
     }
   }
 
@@ -265,10 +266,6 @@ export default {
     list-style: square;
     margin: 10px 0;
   }
-}
-
-.article-section .section__sub-header:first-of-type {
-  visibility: hidden;
 }
 
 
