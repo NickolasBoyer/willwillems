@@ -50,6 +50,18 @@ module.exports = {
 
 **Make sure you've set the `emitCss` option of `svelte-loader` in your `webpack.config.js` to `true`.**
 
+## Pipe your CSS trough PostCSS loader
+
+Add this little piece of config to the bottom of your CSS `module.rules` in `webpack.config.js`, right after `css-loader`.
+
+```
+{
+  loader: 'postcss-loader'
+}
+```
+
+This actually sends your CSS code to PostCSS to be transformed.
+
 ## Optional: include global CSS trough JS
 
 You might have been importing global CSS without processing it, you can fix this by moving the importing of this file to your JS entry file and putting the import at the top there like:
