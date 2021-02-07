@@ -62,6 +62,39 @@ Add this little piece of config to the bottom of your CSS `module.rules` in `web
 
 This actually sends your CSS code to PostCSS to be transformed.
 
+## Advanced (recommended): Add a Svelte config file
+
+If your setup is throwing CSS errors you probably need this, it's a good idea to include it anyway.
+
+Create a `svelte.config.js` file and `npm i --save-dev svelte-preprocess`. Many utilities in the svelte ecosystem hook into this config file. We're going to import it into our Webpack config to configure `svelte-loader`.
+
+```js
+// svelte.config.js
+const sveltePreprocess = require('svelte-preprocess')
+
+module.exports = {
+  preprocess: sveltePreprocess({
+    postcss: true,
+  }),
+  // ...other svelte options
+}
+```
+
+Import this config into your Webpack config with: `const svelteConfig = require('./svelte.config')` and include the preprocess config in the options of your `svelte-loader`:
+
+```js
+{
+  test: /\.svelte$/,
+  use: {
+    loader: 'svelte-loader',
+    options: {
+      emitCss: true,
+      preprocess: svelteConfig.preprocess,
+    },
+  },
+}
+```
+
 ## Optional: include global CSS trough JS
 
 You might have been importing global CSS without processing it, you can fix this by moving the importing of this file to your JS entry file and putting the import at the top there like:
