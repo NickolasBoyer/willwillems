@@ -20,13 +20,13 @@ You'll be prompted with a pop up.
 
 Fill in the email address you'd like to add and click "Next Step".
 
-We'll need to generate an app password, go to [the App Passwords panel in your account settings](https://myaccount.google.com/apppasswords) and generate a new one for the app "Mail" and select device "Other (Custom name)". Give it a name like "Mail My Company".
+For this next step we'll need to generate an app password, go to [the App Passwords panel in your account settings](https://myaccount.google.com/apppasswords) and generate a new one for the app "Mail" and select device "Other (Custom name)". Give it a name like "Mail My Company".
 
 You'll now be shown your new app password, you'll only be able to copy this once.
 
 ![Generate App PW](https://i.imgur.com/6OmZTOp.png)
 
-Fill in the app password along with your other details. Make sure the port is set correctly to 465.
+Fill in the app password along with your other details. **Make sure the port is set correctly to 465**.
 
 ![Email Data](https://i.imgur.com/XSR12Go.png)
 
