@@ -54,7 +54,7 @@ OK, so this obviously gets cluttered fast, how do we fix this? Let’s get to th
 
 One of the first options I tried. Name the folder `LargeComponent` and put the original component in it. You can do two things here.
 
-First you can name the component `index.vue` which probably works in your build system and has the great benefit of not changing your import statements. This is really really handy but a very hacky and not the most stable solution. **Note: this does not work if you are specifying the file extension in your imports like** `**LargeComponent.vue**`
+First you can name the component `index.vue`/`component.vue` which probably works in your build system and has the great benefit of not changing your import statements. This is really really handy but a very hacky and not the most stable solution. **Note: this does not work if you are specifying the file extension in your imports like** `**LargeComponent.vue**`
 
 ```
 components
@@ -102,9 +102,9 @@ Pro’s
 
 Finally there is a bit more uncommon one I really like if you are using imports without file extension specified:
 
-## 3. Putting an index.json in your component folder
+## 3. Putting an index.js/package.json in your component folder
 
-Pretty straightforward, you just throw this `index.json` file in your component folder:
+Pretty straightforward, you just throw this `index.js`/`package.json ` file in your component folder:
 ``` json
 {
     "name": "MY_COMPONENT_NAME",
@@ -118,7 +118,7 @@ This takes care of resolving the import correctly. You can keep a tidy structure
 ```
 components
 |--LargeComponent
-|  |--index.json
+|  |--package.json
 |  |--LargeComponent.vue
 |  |--components
 |  |  |--LargeComponentModal.vue
